@@ -44,7 +44,7 @@ const Priceing = () => {
                       </div>
                       <img
                         className="svg absolute left-[30px] w-[18px] h-[18px] top-1/2 translate-y-[-50%] text-secondary-color mt-[-1px] transition-all duration-300"
-                        src="assets/img/svg/wordpress.svg"
+                        src="assets/img/svg/edit.svg"
                         alt=""
                       />
                     </div>
