@@ -41,7 +41,7 @@ const blogData = [
     title: "Septiembre 2024: ChatGPT Plugins integrados en navegadores",
     date: "30 de septiembre de 2024",
     author: "OpenAI Blog",
-    img: "https://cdn.prod.website-files.com/622611a2b23d0e6b270fba81/64f751c66c9b24f1da00afd3_Product%20GIFs%20(1200%20%C3%97%20630px)%20(16).png",
+    img: "https://www.lavanguardia.com/andro4all/hero/2023/03/chatgpt.jpg?width=1200&aspect_ratio=16:9",
     description: [
       "OpenAI integró plugins de ChatGPT en navegadores populares.",
     ],

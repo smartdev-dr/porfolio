@@ -40,9 +40,7 @@ const TimeLine = () => {
                 data-wow-delay=".2s"
               >
                 <div className="list_inner w-1/3 float-left pr-[40px]">
-                  <span className="inline-block text-[18px]">
-                    Diseño
-                  </span>
+                  <span className="inline-block text-[18px]">Diseño</span>
                 </div>
                 <div className="list_inner w-1/3 float-left pr-[40px]">
                   <span className="inline-block text-[18px] text-black">
@@ -51,7 +49,7 @@ const TimeLine = () => {
                 </div>
                 <div className="list_inner w-1/3 float-left">
                   <span className="inline-block text-[18px]">
-                    Angel Rodrigez
+                    Angel Rodríguez
                   </span>
                 </div>
               </li>
@@ -72,7 +70,7 @@ const TimeLine = () => {
                 </div>
                 <div className="list_inner w-1/3 float-left">
                   <span className="inline-block text-[18px]">
-                    Julio Cesar Robles
+                    Julio César Robles
                   </span>
                 </div>
               </li>
@@ -93,7 +91,28 @@ const TimeLine = () => {
                 </div>
                 <div className="list_inner w-1/3 float-left">
                   <span className="inline-block text-[18px]">
-                    Luis Rodrigez
+                    Luis Rodríguez
+                  </span>
+                </div>
+              </li>
+              <li
+                className="w-full float-left px-0 pt-[27px] pb-[30px] wow fadeInUp"
+                data-wow-duration=".7s"
+                data-wow-delay=".6s"
+              >
+                <div className="list_inner w-1/3 float-left pr-[40px]">
+                  <span className="inline-block text-[18px]">
+                    Marketing Digital
+                  </span>
+                </div>
+                <div className="list_inner w-1/3 float-left pr-[40px]">
+                  <span className="inline-block text-[18px] text-black">
+                    Marketing Digital
+                  </span>
+                </div>
+                <div className="list_inner w-1/3 float-left">
+                  <span className="inline-block text-[18px]">
+                    Jennifer De Los Santos Díaz
                   </span>
                 </div>
               </li>

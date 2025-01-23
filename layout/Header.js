@@ -37,7 +37,7 @@ const Header = ({ dark }) => {
                     className="text-black font-poppins transition-all duration-300"
                     href="#home"
                   >
-                    Home
+                    Inicio
                   </a>
                 </li>
                 <li className="mr-[20px] inline-block opacity-0 invisible relative left-[10px] transition-all duration-300">
@@ -45,7 +45,7 @@ const Header = ({ dark }) => {
                     className="text-black font-poppins transition-all duration-300"
                     href="#portfolio"
                   >
-                    Portfolio
+                    Proyectos
                   </a>
                 </li>
                 <li className="mr-[20px] inline-block opacity-0 invisible relative left-[10px] transition-all duration-300">
@@ -53,7 +53,7 @@ const Header = ({ dark }) => {
                     className="text-black font-poppins transition-all duration-300"
                     href="#skills"
                   >
-                    Skills
+                    Habilidades
                   </a>
                 </li>
                 <li className="mr-[20px] inline-block opacity-0 invisible relative left-[10px] transition-all duration-300">
@@ -61,7 +61,7 @@ const Header = ({ dark }) => {
                     className="text-black font-poppins transition-all duration-300"
                     href="#timeline"
                   >
-                    Timeline
+                    Personal
                   </a>
                 </li>
                 <li className="mr-[20px] inline-block opacity-0 invisible relative left-[10px] transition-all duration-300">
@@ -69,7 +69,7 @@ const Header = ({ dark }) => {
                     className="text-black font-poppins transition-all duration-300"
                     href="#price"
                   >
-                    Price
+                    Servicios
                   </a>
                 </li>
                 <li className="mr-[20px] inline-block opacity-0 invisible relative left-[10px] transition-all duration-300">
@@ -77,7 +77,7 @@ const Header = ({ dark }) => {
                     className="text-black font-poppins transition-all duration-300"
                     href="#news"
                   >
-                    News
+                    Noticias
                   </a>
                 </li>
                 <li className="inline-block opacity-0 invisible relative left-[10px] transition-all duration-300">
@@ -85,7 +85,7 @@ const Header = ({ dark }) => {
                     className="text-black font-poppins transition-all duration-300"
                     href="#contact"
                   >
-                    Contact
+                    Contacto
                   </a>
                 </li>
               </ul>

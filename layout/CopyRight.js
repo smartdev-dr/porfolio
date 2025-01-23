@@ -9,7 +9,7 @@ const CopyRight = () => {
           >
             <div className="text">
               <p className="text-white">
-                Copyright © 2023. All rights reserved.
+                Copyright © 2025 SmartDev. Todos los derechos reservados.
               </p>
             </div>
             <div className="social">

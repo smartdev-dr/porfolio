@@ -14,7 +14,8 @@ const Portfolio = () => {
   const data = [
     {
       title: "Software de gestión de proyectos de construcción",
-      description: "El Software permite crear proyectos y gestionarlos de manera eficiente y sencilla. El software permite la creación de proyectos de construcción, gestión de proyectos, Inventario, Compras, Ventas, Contizacones, facturación, cuentas por cobrar.",
+      description:
+        "El Software permite crear proyectos y gestionarlos de manera eficiente y sencilla. El software permite la creación de proyectos de construcción, gestión de proyectos, Inventario, Compras, Ventas, Contizacones, facturación, cuentas por cobrar.",
       client: "Mike Pichardo Santana",
       category: "Desarollo aplicación web",
       date: "Enero 2025",
@@ -24,15 +25,15 @@ const Portfolio = () => {
           name: "Instagram",
           icon: "assets/img/svg/social/instagram.svg",
           link: "https://www.instagram.com/mikrog_ingenieria/",
-        }
-      ]
-    }
-  ]
+        },
+      ],
+    },
+  ];
 
-  const mkgPortfolio =
-  {
+  const mkgPortfolio = {
     title: "Software de gestión de proyectos de construcción",
-    description: "El Software permite crear proyectos y gestionarlos de manera eficiente y sencilla. El software permite la creación de proyectos de construcción, gestión de proyectos, Inventario, Compras, Ventas, Contizacones, facturación, cuentas por cobrar.",
+    description:
+      "El Software permite crear proyectos y gestionarlos de manera eficiente y sencilla. El software permite la creación de proyectos de construcción, gestión de proyectos, Inventario, Compras, Ventas, Contizacones, facturación, cuentas por cobrar.",
     client: "Mike Pichardo Santana",
     category: "Desarollo aplicación web",
     date: "Enero 2025",
@@ -41,30 +42,30 @@ const Portfolio = () => {
     images: [
       {
         src: "assets/img/portfolio/2mk.png",
-        alt: ""
+        alt: "",
       },
       {
         src: "assets/img/portfolio/3mk.png",
-        alt: ""
+        alt: "",
       },
       {
         src: "assets/img/portfolio/4mk.png",
-        alt: ""
-      }
+        alt: "",
+      },
     ],
     social: [
       {
         name: "Instagram",
         icon: "assets/img/svg/social/instagram.svg",
         link: "https://www.instagram.com/mikrog_ingenieria/",
-      }
-    ]
-  }
+      },
+    ],
+  };
 
-  const enterPorfolio =
-  {
+  const enterPorfolio = {
     title: "Sistema de gestión de empleados de construcción",
-    description: "El Software permite registrar los empleados y para poder registrar el acceso del personal en la obra, El sistema web permite monitorear cuantos empleados hay en obra en tiempo real y gestionar el acceso de los empleados. (Permisos, Visitas, Pagos del personal de casa etc.), La aplicacion movil permite escanear el QR del empleado para registrar las entradas y salidas",
+    description:
+      "El Software permite registrar los empleados y para poder registrar el acceso del personal en la obra, El sistema web permite monitorear cuantos empleados hay en obra en tiempo real y gestionar el acceso de los empleados. (Permisos, Visitas, Pagos del personal de casa etc.), La aplicacion movil permite escanear el QR del empleado para registrar las entradas y salidas",
     client: "Edwin Marmolejos",
     category: "Desarollo aplicación web - App Mobile - Backend",
     date: "Enero 2025",
@@ -73,25 +74,24 @@ const Portfolio = () => {
     images: [
       {
         src: "assets/img/portfolio/1En.png",
-        alt: ""
+        alt: "",
       },
       {
         src: "assets/img/portfolio/3En.png",
-        alt: ""
+        alt: "",
       },
       {
         src: "assets/img/portfolio/4En.png",
-        alt: ""
-      }
+        alt: "",
+      },
     ],
-    social: [
-
-    ]
-  }
+    social: [],
+  };
 
   const InverAgroportfolio = {
     title: "Sistema de contabilidad y facturación remota",
-    description: "La Software permite la gestión de la contabilidad y facturación de clientes, así como la gestión de los activos de las empresas. La Aplicación permite a los choferes(distribuidores) realizar facturas y cotizaciones permitiendo conectarse a Impresoras Laser Bluetooth para la entrega de facturas",
+    description:
+      "La Software permite la gestión de la contabilidad y facturación de clientes, así como la gestión de los activos de las empresas. La Aplicación permite a los choferes(distribuidores) realizar facturas y cotizaciones permitiendo conectarse a Impresoras Laser Bluetooth para la entrega de facturas",
     client: "Aramis ",
     category: "Desarollo aplicación web - App Mobile - Backend",
     date: "Enero 2025",
@@ -100,7 +100,7 @@ const Portfolio = () => {
     images: [
       {
         src: "assets/img/portfolio/2IA.png",
-        alt: ""
+        alt: "",
       },
       // {
       //   src: "assets/img/portfolio/2IA.png",
@@ -111,10 +111,8 @@ const Portfolio = () => {
       //   alt: ""
       // }
     ],
-    social: [
-
-    ]
-  }
+    social: [],
+  };
   return (
     <div
       className="kura_tm_section w-full h-auto clear-both float-left"
@@ -126,7 +124,9 @@ const Portfolio = () => {
             <span className="inline-block mb-[10px] text-secondary-color font-poppins font-medium">
               Projects
             </span>
-            <h3 className="font-extrabold uppercase">Algunos proyectos que hemos trabajado</h3>
+            <h3 className="font-extrabold uppercase">
+              Algunos proyectos que hemos trabajado
+            </h3>
           </div>
           <div
             className="portfolio_list w-full h-auto clear-both float-left pt-[92px] gallery_zoom wow fadeInUp"
@@ -184,7 +184,6 @@ const Portfolio = () => {
                       />
                     </div>
                     <a href="https://do.logicpaq.com/app/" target="_blank">
-
                       <div className="overlay absolute inset-[10px] bg-white rounded-[10px] z-[1] transition-all duration-300" />
                     </a>
                     <img
@@ -198,9 +197,7 @@ const Portfolio = () => {
                       </h3>
                       <span className="font-poppins">Detalle</span>
                     </div>
-                    <a
-                      href="https://do.logicpaq.com/app/"
-                    />
+                    <a href="https://do.logicpaq.com/app/" />
                   </div>
                 </SwiperSlide>
                 <SwiperSlide className="swiper-slide">
@@ -228,7 +225,6 @@ const Portfolio = () => {
                       </h3>
 
                       <span className="font-poppins">Detalle</span>
-
                     </div>
                     <a
                       className="kura_tm_full_link absolute inset-0 z-[5] portfolio_popup"
@@ -262,11 +258,10 @@ const Portfolio = () => {
                     />
                     <div className="details absolute z-[2] bottom-[41px] left-[49px] transition-all duration-300">
                       <h3 className="text-[20px] font-bold mb-[4px]">
-                        Sistema de Contabilidad 
+                        Sistema de Contabilidad
                       </h3>
 
                       <span className="font-poppins">Detalle</span>
-
                     </div>
                     <a
                       className="kura_tm_full_link absolute inset-0 z-[5] portfolio_popup"
@@ -294,7 +289,6 @@ const Portfolio = () => {
                       />
                     </div>
                     <a href="https://github.com/joshuamg41" target="_blank">
-
                       <div className="overlay absolute inset-[10px] bg-white rounded-[10px] z-[1] transition-all duration-300" />
                     </a>
                     <img
@@ -304,16 +298,13 @@ const Portfolio = () => {
                     />
                     <div className="details absolute z-[2] bottom-[41px] left-[49px] transition-all duration-300">
                       <h3 className="text-[20px] font-bold mb-[4px]">
-                      mas proyectos
+                        Más proyectos
                       </h3>
-                      <span className="font-poppins">Visite </span>
+                      <span className="font-poppins"> Ver más </span>
                     </div>
-                    <a
-                      href="https://do.logicpaq.com/app/"
-                    />
+                    <a href="https://do.logicpaq.com/app/" />
                   </div>
                 </SwiperSlide>
-              
               </div>
               <div className="kura_tm_swiper_progress fill">
                 <div className="my_pagination_in">
