@@ -17,9 +17,19 @@ const Priceing = () => {
                 </div>
                 <div className="text w-full float-left pt-[40px]">
                   <p>
-                    For more than 20 years our experts have been accomplishing
-                    enough with modern Web Development, new generation web and
-                    app programming language. ( condiciones aplican )
+                    <strong>Desarrollo Web y Móvil a Medida</strong> <br />{" "}
+                    Ofrecemos servicios Fullstack en tecnologías como React,
+                    React Native, Flutter, JavaScript, TypeScript, Node.js,
+                    Next.js, Entre otros. Con soluciones modernas y
+                    personalizadas para aplicaciones web y móviles, priorizando
+                    la calidad, el rendimiento y la experiencia del usuario.{" "}
+                    <br />
+                    <strong>Soluciones Complejas y Escalables</strong> <br />
+                    Desde la creación de interfaces interactivas hasta el
+                    desarrollo de APIs y aplicaciones multiplataforma,
+                    transformando ideas en productos digitales eficientes,
+                    optimizados y listos para escalar. <br />{" "}
+                    <small>( condiciones aplican )</small>
                   </p>
                 </div>
               </div>
