@@ -11,7 +11,7 @@ const Priceing = () => {
               <div className="kura_tm_sticky_section">
                 <div className="kura_tm_main_title w-full h-auto clear-both float-left mt-[58px]">
                   <span className="inline-block mb-[10px] text-secondary-color font-poppins font-medium">
-                    Precios 
+                    Services
                   </span>
                   <h3 className="font-extrabold uppercase">Servicios</h3>
                 </div>
@@ -38,9 +38,7 @@ const Priceing = () => {
                         </span>
                       </div>
                       <div className="cost">
-                        <span className="text-[18px] text-black font-poppins transition-all duration-300">
-                          $1750
-                        </span>
+                        <span className="text-[18px] text-black font-poppins transition-all duration-300"></span>
                       </div>
                       <img
                         className="svg absolute left-[30px] w-[18px] h-[18px] top-1/2 translate-y-[-50%] text-secondary-color mt-[-1px] transition-all duration-300"
@@ -61,9 +59,7 @@ const Priceing = () => {
                         </span>
                       </div>
                       <div className="cost">
-                        <span className="text-[18px] text-black font-poppins transition-all duration-300">
-                          $600
-                        </span>
+                        <span className="text-[18px] text-black font-poppins transition-all duration-300"></span>
                       </div>
                       <img
                         className="svg absolute left-[30px] w-[18px] h-[18px] top-1/2 translate-y-[-50%] text-secondary-color mt-[-1px] transition-all duration-300"
@@ -84,9 +80,7 @@ const Priceing = () => {
                         </span>
                       </div>
                       <div className="cost">
-                        <span className="text-[18px] text-black font-poppins transition-all duration-300">
-                          $2000
-                        </span>
+                        <span className="text-[18px] text-black font-poppins transition-all duration-300"></span>
                       </div>
                       <img
                         className="svg absolute left-[30px] w-[18px] h-[18px] top-1/2 translate-y-[-50%] text-secondary-color mt-[-1px] transition-all duration-300"
@@ -107,9 +101,7 @@ const Priceing = () => {
                         </span>
                       </div>
                       <div className="cost">
-                        <span className="text-[18px] text-black font-poppins transition-all duration-300">
-                          $300
-                        </span>
+                        <span className="text-[18px] text-black font-poppins transition-all duration-300"></span>
                       </div>
                       <img
                         className="svg absolute left-[30px] w-[18px] h-[18px] top-1/2 translate-y-[-50%] text-secondary-color mt-[-1px] transition-all duration-300"
@@ -130,9 +122,7 @@ const Priceing = () => {
                         </span>
                       </div>
                       <div className="cost">
-                        <span className="text-[18px] text-black font-poppins transition-all duration-300">
-                          $500
-                        </span>
+                        <span className="text-[18px] text-black font-poppins transition-all duration-300"></span>
                       </div>
                       <img
                         className="svg absolute left-[30px] w-[18px] h-[18px] top-1/2 translate-y-[-50%] text-secondary-color mt-[-1px] transition-all duration-300"
