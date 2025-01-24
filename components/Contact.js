@@ -26,7 +26,9 @@ const Contact = () => {
             >
               <div className="text w-full float-left mb-[42px]">
                 <p>
-                  Por favor, rellene el formulario de esta sección para ponerse en contacto conmigo. O llame entre las 9:00 a. m. y las 8:00 p. m., hora del Este, de lunes a viernes.
+                  Por favor, rellene el formulario de esta sección para ponerse
+                  en contacto conmigo. O llame entre las 9:00 a. m. y las 8:00
+                  p. m., hora del Este, de lunes a viernes.
                 </p>
               </div>
               <div className="short w-full float-left">
@@ -105,11 +107,19 @@ const Contact = () => {
                   <div className="first w-full float-left">
                     <ul>
                       <li className="w-full mb-[30px] float-left">
-                        <input id="name" type="text" placeholder="Name"  onChange={(e) => setName(e.target.value)} />
+                        <input
+                          id="name"
+                          type="text"
+                          placeholder="Name"
+                          onChange={(e) => setName(e.target.value)}
+                        />
                       </li>
                       <li className="w-full mb-[30px] float-left">
-                        <input id="email" type="text" placeholder="Email" 
-                        onChange={(e) => setEmail(e.target.value)}
+                        <input
+                          id="email"
+                          type="text"
+                          placeholder="Email"
+                          onChange={(e) => setEmail(e.target.value)}
                         />
                       </li>
                     </ul>
@@ -123,8 +133,11 @@ const Contact = () => {
                     />
                   </div>
                   <div className="kura_tm_button" data-position="left">
-                    <a href={`https://wa.me/18093962749?text=Nombre:${name} Correo:${email} Mensaje:${message}`} target="_blank">
-                      <span>Whatapp</span>
+                    <a
+                      href={`https://wa.me/18093962749?text=Nombre:${name} Correo:${email} Mensaje:${message}`}
+                      target="_blank"
+                    >
+                      <span>WhatsApp</span>
                       <img
                         className="svg inline-block"
                         src="assets/img/svg/right-arrow.svg"

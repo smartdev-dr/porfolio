@@ -43,9 +43,12 @@ const Priceing = () => {
                   >
                     <div className="list_inner w-full h-auto clear-both flex justify-between items-center relative py-[30px] pr-[30px] pl-[60px] bg-white rounded-[10px] transition-all duration-300">
                       <div className="title pr-[30px]">
-                        <span className="text-[18px] text-black font-poppins transition-all duration-300">
+                        <a
+                          href="#contact"
+                          className="text-[18px] text-white font-poppins transition-all duration-300"
+                        >
                           Aplicaciones Web
-                        </span>
+                        </a>
                       </div>
                       <div className="cost">
                         <span className="text-[18px] text-black font-poppins transition-all duration-300"></span>
@@ -64,9 +67,12 @@ const Priceing = () => {
                   >
                     <div className="list_inner w-full h-auto clear-both flex justify-between items-center relative py-[30px] pr-[30px] pl-[60px] bg-white rounded-[10px] transition-all duration-300">
                       <div className="title pr-[30px]">
-                        <span className="text-[18px] text-black font-poppins transition-all duration-300">
+                        <a
+                          href="#contact"
+                          className="text-[18px] text-white font-poppins transition-all duration-300"
+                        >
                           HTML Development
-                        </span>
+                        </a>
                       </div>
                       <div className="cost">
                         <span className="text-[18px] text-black font-poppins transition-all duration-300"></span>
@@ -85,9 +91,12 @@ const Priceing = () => {
                   >
                     <div className="list_inner w-full h-auto clear-both flex justify-between items-center relative py-[30px] pr-[30px] pl-[60px] bg-white rounded-[10px] transition-all duration-300">
                       <div className="title pr-[30px]">
-                        <span className="text-[18px] text-black font-poppins transition-all duration-300">
+                        <a
+                          href="#contact"
+                          className="text-[18px] text-white font-poppins transition-all duration-300"
+                        >
                           Aplicaciones Moviles
-                        </span>
+                        </a>
                       </div>
                       <div className="cost">
                         <span className="text-[18px] text-black font-poppins transition-all duration-300"></span>
@@ -106,12 +115,15 @@ const Priceing = () => {
                   >
                     <div className="list_inner w-full h-auto clear-both flex justify-between items-center relative py-[30px] pr-[30px] pl-[60px] bg-white rounded-[10px] transition-all duration-300">
                       <div className="title pr-[30px]">
-                        <span className="text-[18px] text-black font-poppins transition-all duration-300">
+                        <a
+                          href="#contact"
+                          className="text-[18px] text-white font-poppins transition-all duration-300"
+                        >
                           Diseño de Logo
-                        </span>
+                        </a>
                       </div>
                       <div className="cost">
-                        <span className="text-[18px] text-black font-poppins transition-all duration-300"></span>
+                        <span className="text-[18px] text-white font-poppins transition-all duration-300"></span>
                       </div>
                       <img
                         className="svg absolute left-[30px] w-[18px] h-[18px] top-1/2 translate-y-[-50%] text-secondary-color mt-[-1px] transition-all duration-300"
@@ -127,9 +139,12 @@ const Priceing = () => {
                   >
                     <div className="list_inner w-full h-auto clear-both flex justify-between items-center relative py-[30px] pr-[30px] pl-[60px] bg-white rounded-[10px] transition-all duration-300">
                       <div className="title pr-[30px]">
-                        <span className="text-[18px] text-black font-poppins transition-all duration-300">
+                        <a
+                          href="#contact"
+                          className="text-[18px] text-white font-poppins transition-all duration-300"
+                        >
                           UI/UX Design
-                        </span>
+                        </a>
                       </div>
                       <div className="cost">
                         <span className="text-[18px] text-black font-poppins transition-all duration-300"></span>
@@ -142,15 +157,18 @@ const Priceing = () => {
                     </div>
                   </li>
                   <li
-                    className="w-full float-left wow fadeInUp"
+                    className="w-full float-left wow fadeInUp "
                     data-wow-duration=".7s"
                     data-wow-delay=".8s"
                   >
                     <div className="list_inner w-full h-auto clear-both flex justify-between items-center relative py-[30px] pr-[30px] pl-[60px] bg-white rounded-[10px] transition-all duration-300">
                       <div className="title pr-[30px]">
-                        <span className="text-[18px] text-black font-poppins transition-all duration-300">
+                        <a
+                          href="#contact"
+                          className="text-[18px] text-white font-poppins transition-all duration-300"
+                        >
                           Marketing Digital
-                        </span>
+                        </a>
                       </div>
                       <div className="cost">
                         <span className="text-[18px] text-black font-poppins transition-all duration-300"></span>
