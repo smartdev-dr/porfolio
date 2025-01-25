@@ -27,7 +27,7 @@ const fontFamily = `${mulish.variable} ${poppins.variable}`;
 
 export const metadata = {
   title: "SmartDev",
-  description: "Software development company",
+  description: "Diseño y desarrollo de software",
 };
 
 export default function RootLayout({ children }) {

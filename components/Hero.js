@@ -52,9 +52,9 @@ const Hero = () => {
               <span className="name inline-block mb-[16px] text-secondary-color font-poppins font-medium">
                 SmartDev
               </span>
-              <h3 className="job text-[45px] font-extrabold leading-[1.4] uppercase mb-[25px]">
+              <h1 className="job text-[45px] font-extrabold leading-[1.4] uppercase mb-[25px]">
                 Diseño y desarrollo de software
-              </h3>
+              </h1>
               <div className="services w-full h-auto clear-both float-left mb-[35px]">
                 <ul>
                   {services.map((service) => (
