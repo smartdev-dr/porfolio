@@ -38,8 +38,11 @@ const Skills = () => {
                 data-wow-duration=".7s"
               >
                 <p className="text-[#bbb]">
-                SmartDev es una empresa de desarrollo de software especializada en crear soluciones modernas, escalables y eficientes para múltiples plataformas. Con experiencia en tecnologías de vanguardia como React, Next.js, Node.js y más, SmartDev se dedica a entregar productos innovadores que satisfacen las necesidades de una diversa base de clientes.
-                </p>
+                  En SmartDev, desarrollamos software a medida para ayudarte a llevar tu negocio al siguiente nivel. Creamos aplicaciones móviles, plataformas web y software de escritorio, diseñados para adaptarse a tus necesidades y hacer más eficientes tus procesos.
+
+                  Nuestro equipo de expertos combina tecnología innovadora con soluciones personalizadas para ofrecer productos escalables, seguros y de alto rendimiento. 
+
+                   ¿Tienes una idea en mente? Hablemos y hagámosla realidad.                </p>
               </div>
               <div
                 className="dodo_progress wow fadeInUp"
@@ -68,7 +71,7 @@ const Skills = () => {
                     </div>
                   </div>
                 </div>
-                
+
                 <div className="progress_inner" data-value={100}>
                   <span>
                     <span className="label">React Native</span>
@@ -102,7 +105,7 @@ const Skills = () => {
                     </div>
                   </div>
                 </div>
-                
+
               </div>
             </div>
             <div
