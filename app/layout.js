@@ -27,7 +27,7 @@ const fontFamily = `${mulish.variable} ${poppins.variable}`;
 
 export const metadata = {
   title: "SmartDev",
-  description: "Diseño y desarrollo de software",
+  description: "En SmartDev desarrollamos software a medida: apps móviles, plataformas web y soluciones de escritorio para empresas. 🚀 Mejora tu negocio con tecnología innovadora. ¡Contáctanos!",
 };
 
 export default function RootLayout({ children }) {

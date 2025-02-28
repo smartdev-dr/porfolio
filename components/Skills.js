@@ -27,7 +27,7 @@ const Skills = () => {
             <div className="left w-[60%] pr-[200px]">
               <div className="kura_tm_main_title w-full h-auto clear-both float-left">
                 <span className="inline-block mb-[10px] text-secondary-color font-poppins font-medium">
-                  Habilidades
+                  Habilidades Smartdev
                 </span>
                 <h3 className="font-extrabold uppercase text-white">
                   Habilidades de desarrollo

@@ -49,11 +49,11 @@ const Hero = () => {
         <div className="container min-h-full">
           <div className="content w-full min-h-[100vh] flex items-center relative">
             <div className="left w-1/2 pr-[50px] relative opacity-0 invisible top-[20px] transition-all duration-[400ms]">
-              <span className="name inline-block mb-[16px] text-secondary-color font-poppins font-medium">
-                SmartDev
-              </span>
+              <h2 className="name inline-block mb-[16px] text-secondary-color font-poppins font-medium" style={{ fontSize: 16 }}>
+                Soluciones tecnológicas para empresas
+              </h2>
               <h1 className="job text-[45px] font-extrabold leading-[1.4] uppercase mb-[25px]">
-                Diseño y desarrollo de software
+                Desarrollo de Software a Medida
               </h1>
               <div className="services w-full h-auto clear-both float-left mb-[35px]">
                 <ul>
@@ -84,7 +84,7 @@ const Hero = () => {
                 <ul>
                   <li className="mr-[50px] mb-[15px] py-0 inline-block">
                     <div className="list_inner flex items-center">
-                      <h3 className="text-[45px] font-semibold">5+</h3>
+                      <span className="text-[45px] font-semibold" >5+</span>
                       <span className="font-poppins pl-[15px] inline-block leading-[1.4] relative top-[-3px] text-[14px]">
                         años de
                         <br />

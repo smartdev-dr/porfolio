@@ -121,9 +121,9 @@ const Portfolio = () => {
       <div className="kura_tm_portfolio w-full h-auto clear-both float-left px-0 pt-[140px] pb-[138px]">
         <div className="container">
           <div className="kura_tm_main_title w-full h-auto clear-both float-left">
-            <span className="inline-block mb-[10px] text-secondary-color font-poppins font-medium">
-              Projects
-            </span>
+            <h3 className="inline-block mb-[10px] text-secondary-color font-poppins font-medium" style={{ fontSize: 16 }}>
+              Aplicaciones móviles, software web y de escritorio
+            </h3>
             <h3 className="font-extrabold uppercase">
               Algunos proyectos que hemos trabajado
             </h3>
