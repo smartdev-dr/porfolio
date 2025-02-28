@@ -34,6 +34,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <link rel="icon" type="image/svg+xml" href="/assets/img/logo/logo.png" />
+      <meta name="google-site-verification" content="3yUvASO57j8k8w49UY_dFOfKYYMl9qJPudTZARWNyrM" />
       <body className={fontFamily}>
         <Preloader />
         <State>{children}</State>
