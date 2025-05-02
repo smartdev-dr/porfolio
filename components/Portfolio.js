@@ -288,7 +288,7 @@ const Portfolio = () => {
                         data-img-url="assets/img/portfolio/0GH.webp"
                       />
                     </div>
-                    <a href="https://github.com/joshuamg41" target="_blank">
+                    <a href="https://github.com/smartdev-dr" target="_blank">
                       <div className="overlay absolute inset-[10px] bg-white rounded-[10px] z-[1] transition-all duration-300" />
                     </a>
                     <img
