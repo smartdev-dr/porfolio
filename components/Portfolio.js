@@ -200,7 +200,7 @@ const Portfolio = () => {
                     <a href="https://do.logicpaq.com/app/" />
                   </div>
                 </SwiperSlide>
-                <SwiperSlide className="swiper-slide">
+                {/* <SwiperSlide className="swiper-slide">
                   <div className="list_inner w-full h-auto clear-both float-left">
                     <div className="image relative">
                       <img
@@ -236,7 +236,7 @@ const Portfolio = () => {
                       }}
                     />
                   </div>
-                </SwiperSlide>
+                </SwiperSlide> */}
                 <SwiperSlide className="swiper-slide">
                   <div className="list_inner w-full h-auto clear-both float-left">
                     <div className="image relative">
