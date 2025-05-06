@@ -45,7 +45,7 @@ const Priceing = () => {
                       <div className="title pr-[30px]">
                         <a
                           href="#contact"
-                          className="text-[18px] text-white font-poppins transition-all duration-300"
+                          className="text-[18px] text-gray-500 font-poppins transition-all duration-300"
                         >
                           Aplicaciones Web
                         </a>
@@ -69,7 +69,7 @@ const Priceing = () => {
                       <div className="title pr-[30px]">
                         <a
                           href="#contact"
-                          className="text-[18px] text-white font-poppins transition-all duration-300"
+                          className="text-[18px] text-gray-500  font-poppins transition-all duration-300"
                         >
                           HTML Development
                         </a>
@@ -93,7 +93,7 @@ const Priceing = () => {
                       <div className="title pr-[30px]">
                         <a
                           href="#contact"
-                          className="text-[18px] text-white font-poppins transition-all duration-300"
+                          className="text-[18px]  text-gray-500  font-poppins transition-all duration-300"
                         >
                           Aplicaciones Moviles
                         </a>
@@ -117,13 +117,13 @@ const Priceing = () => {
                       <div className="title pr-[30px]">
                         <a
                           href="#contact"
-                          className="text-[18px] text-white font-poppins transition-all duration-300"
+                          className="text-[18px]  text-gray-500  font-poppins transition-all duration-300"
                         >
                           Diseño de Logo
                         </a>
                       </div>
                       <div className="cost">
-                        <span className="text-[18px] text-white font-poppins transition-all duration-300"></span>
+                        <span className="text-[18px]  text-gray-500  font-poppins transition-all duration-300"></span>
                       </div>
                       <img
                         className="svg absolute left-[30px] w-[18px] h-[18px] top-1/2 translate-y-[-50%] text-secondary-color mt-[-1px] transition-all duration-300"
@@ -141,7 +141,7 @@ const Priceing = () => {
                       <div className="title pr-[30px]">
                         <a
                           href="#contact"
-                          className="text-[18px] text-white font-poppins transition-all duration-300"
+                          className="text-[18px]  text-gray-500  font-poppins transition-all duration-300"
                         >
                           UI/UX Design
                         </a>
@@ -165,7 +165,7 @@ const Priceing = () => {
                       <div className="title pr-[30px]">
                         <a
                           href="#contact"
-                          className="text-[18px] text-white font-poppins transition-all duration-300"
+                          className="text-[18px]  text-gray-500  font-poppins transition-all duration-300"
                         >
                           Marketing Digital
                         </a>

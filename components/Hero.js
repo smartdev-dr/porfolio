@@ -84,7 +84,7 @@ const Hero = () => {
                 <ul>
                   <li className="mr-[50px] mb-[15px] py-0 inline-block">
                     <div className="list_inner flex items-center">
-                      <span className="text-[45px] font-semibold" >5+</span>
+                      <span className="text-[45px] font-semibold" >10+</span>
                       <span className="font-poppins pl-[15px] inline-block leading-[1.4] relative top-[-3px] text-[14px]">
                         años de
                         <br />
@@ -94,7 +94,7 @@ const Hero = () => {
                   </li>
                   <li className="mb-[15px] py-0 inline-block">
                     <div className="list_inner flex items-center">
-                      <h3 className="text-[45px] font-semibold">20+</h3>
+                      <h3 className="text-[45px] font-semibold">100+</h3>
                       <span className="font-poppins pl-[15px] inline-block leading-[1.4] relative top-[-3px] text-[14px]">
                         Proyectos
                         <br />

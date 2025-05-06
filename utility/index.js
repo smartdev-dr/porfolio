@@ -67,6 +67,8 @@ export const kuraUtilit = {
           if (el.parentNode) {
             el.parentNode.replaceChild(svg, el);
           }
+        }).catch(function (error) {
+          console.log(error);
         });
     });
   },
