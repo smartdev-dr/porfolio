@@ -2,15 +2,29 @@
 import { NextResponse } from 'next/server';
 import nodemailer from 'nodemailer';
 
+export async function OPTIONS() {
+  // Manejo de preflight
+  return NextResponse.json({}, {
+    status: 200,
+    headers: corsHeaders,
+  });
+}
+
+const corsHeaders = {
+  'Access-Control-Allow-Origin': '*', // o el dominio exacto
+  'Access-Control-Allow-Methods': 'POST, GET, OPTIONS',
+  'Access-Control-Allow-Headers': 'Content-Type',
+};
+
 export async function POST(req) {
   const { fullname, email, phone, message } = await req.json();
   const transporter = nodemailer.createTransport({
     host: 'smtp.zoho.com',
-    port: 465, // Usa 587 si prefieres TLS
-    secure: true, // true para 465, false para 587
+    port: 465,
+    secure: true,
     auth: {
-      user: process.env.ZOHO_EMAIL, // tu correo de Zoho
-      pass: process.env.ZOHO_PASS,  // tu contraseña o app password
+      user: process.env.ZOHO_EMAIL,
+      pass: process.env.ZOHO_PASS,
     },
   });
 
@@ -29,10 +43,16 @@ export async function POST(req) {
       
     });
 
-    return NextResponse.json({ message: 'Correo enviado correctamente' });
+  return new NextResponse(JSON.stringify({ message: 'Recibido' }), {
+    status: 200,
+    headers: corsHeaders,
+  });
   } catch (error) {
     console.error(error);
-    return NextResponse.json({ error: 'Error al enviar el correo' }, { status: 500 });
+   return new NextResponse(JSON.stringify({ message: 'Recibido' }), {
+    status: 500,
+    headers: corsHeaders,
+  });
   }
 }
  
