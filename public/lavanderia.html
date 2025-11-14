@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lavandería Premium San Cristóbal</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 300px;
+            max-height: 400px;
+        }
+        @media (min-width: 640px) {
+            .chart-container {
+                height: 350px;
+            }
+        }
+        .animate-spin {
+            animation: spin 1s linear infinite;
+        }
+        @keyframes spin {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-800 font-sans">
+
+    <header class="bg-[#004f7c] text-white p-8 md:p-12 text-center">
+        <h1 class="text-3xl md:text-5xl font-bold mb-2">Lavandería Premium</h1>
+    </header>
+
+    <main class="max-w-7xl mx-auto p-4 md:p-8">
+
+        <section class="mb-12">
+            <div class="bg-white rounded-lg shadow-xl p-6 md:p-8">
+                <h2 class="text-3xl font-bold text-center text-[#004f7c] mb-4">El Concepto y Nuestros Servicios</h2>
+                <p class="text-center text-lg text-gray-700 max-w-3xl mx-auto mb-8">
+                    Revolucionamos el servicio de lavandería en San Cristóbal con un modelo enfocado en la conveniencia, precios justos y un servicio al cliente excepcional. Cubrimos una necesidad real con propuestas únicas en la zona.
+                </p>
+                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 text-center">
+                    <div class="bg-gray-50 p-6 rounded-lg shadow-md">
+                        <span class="text-5xl">🧺</span>
+                        <h3 class="text-xl font-bold mt-4 mb-2 text-[#0073cc]">Lavado por Jampel</h3>
+                        <p class="text-gray-600">Tarifa fija por cesto de ropa. Simple, justo y sin sorpresas.</p>
+                    </div>
+                    <div class="bg-gray-50 p-6 rounded-lg shadow-md">
+                        <span class="text-5xl">🚗</span>
+                        <h3 class="text-xl font-bold mt-4 mb-2 text-[#0073cc]">Servicio a Domicilio</h3>
+                        <p class="text-gray-600">Únicos en la zona con recogida y entrega programada.</p>
+                    </div>
+                    <div class="bg-gray-50 p-6 rounded-lg shadow-md">
+                        <span class="text-5xl">👔</span>
+                        <h3 class="text-xl font-bold mt-4 mb-2 text-[#0073cc]">Piezas Delicadas</h3>
+                        <p class="text-gray-600">Tratamiento individual y planchado experto para ropa especial.</p>
+                    </div>
+                    <div class="bg-gray-50 p-6 rounded-lg shadow-md">
+                        <span class="text-5xl">📈</span>
+                        <h3 class="text-xl font-bold mt-4 mb-2 text-[#0073cc]">Planes Mensuales</h3>
+                        <p class="text-gray-600">Soluciones para clientes frecuentes y negocios locales.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="mb-12">
+            <h2 class="text-3xl font-bold text-center text-[#004f7c] mb-4">Proyección Financiera Mensual (Inicio)</h2>
+            <p class="text-center text-lg text-gray-700 max-w-3xl mx-auto mb-8">
+                Los números hablan por sí solos. Con un modelo de costos optimizado y flujos de ingreso diversificados, la rentabilidad es clara desde el primer día.
+            </p>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 mb-8">
+                <div class="bg-white rounded-lg shadow-xl p-6 text-center">
+                    <h3 class="text-xl font-bold text-gray-500 mb-2">Ingresos Totales</h3>
+                    <p class="text-5xl font-extrabold text-[#0073cc]">RD$147,200</p>
+                </div>
+                <div class="bg-white rounded-lg shadow-xl p-6 text-center">
+                    <h3 class="text-xl font-bold text-gray-500 mb-2">Costos Operativos</h3>
+                    <p class="text-5xl font-extrabold text-[#ffc107]">RD$29,376</p>
+                </div>
+                <div class="bg-white rounded-lg shadow-xl p-6 text-center bg-[#004f7c] text-white">
+                    <h3 class="text-xl font-bold text-gray-300 mb-2">Ganancia Neta Estimada</h3>
+                    <p class="text-5xl font-extrabold text-white">RD$117,824</p>
+                    <p class="text-lg font-bold text-[#80dfff] mt-2">~80% Margen Neto</p>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
+                <div class="bg-white rounded-lg shadow-xl p-6 md:p-8">
+                    <h3 class="text-2xl font-bold text-center text-[#004f7c] mb-4">Desglose de Ingresos</h3>
+                    <p class="text-center text-gray-600 mb-6">El lavado por jampel representa la mayor parte de los ingresos, validando el modelo de negocio principal.</p>
+                    <div class="chart-container">
+                        <canvas id="revenueChart"></canvas>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-xl p-6 md:p-8">
+                    <h3 class="text-2xl font-bold text-center text-[#004f7c] mb-4">Desglose de Costos</h3>
+                    <p class="text-center text-gray-600 mb-6">El alquiler es el costo fijo principal, con costos variables (gas, luz, insumos) controlados y escalables.</p>
+                    <div class="chart-container">
+                        <canvas id="costsChart"></canvas>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="mb-12">
+            <div class="bg-white rounded-lg shadow-xl p-6 md:p-8">
+                <h2 class="text-3xl font-bold text-center text-[#004f7c] mb-4">Potencial de Crecimiento Exponencial</h2>
+                <p class="text-center text-lg text-gray-700 max-w-3xl mx-auto mb-8">
+                    El negocio está diseñado para escalar. Iniciaremos operando solo al 25-30% de nuestra capacidad instalada, abriendo un camino claro para quintuplicar los ingresos sin necesidad de adquirir más equipos.
+                </p>
+                <div class="chart-container max-w-3xl">
+                    <canvas id="growthChart"></canvas>
+                </div>
+            </div>
+        </section>
+
+        <section class="mb-12">
+            <h2 class="text-3xl font-bold text-center text-[#004f7c] mb-4">Nuestras Ventajas Competitivas</h2>
+            <p class="text-center text-lg text-gray-700 max-w-3xl mx-auto mb-8">
+                ¿Qué nos hace diferentes? Nuestro modelo de negocio ataca directamente las ineficiencias del mercado local, ofreciendo un valor que la competencia actual no puede igualar.
+            </p>
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
+                <div class="bg-white rounded-lg shadow-xl p-6 text-center">
+                    <span class="text-5xl">💰</span>
+                    <h3 class="text-xl font-bold mt-4 mb-2 text-[#0073cc]">Precio Justo</h3>
+                    <p class="text-gray-600">Modelo "por jampel" más atractivo y transparente.</p>
+                </div>
+                <div class="bg-white rounded-lg shadow-xl p-6 text-center">
+                    <span class="text-5xl">🚚</span>
+                    <h3 class="text-xl font-bold mt-4 mb-2 text-[#0073cc]">Conveniencia Total</h3>
+                    <p class="text-gray-600">Servicio a domicilio único que elimina la fricción del cliente.</p>
+                </div>
+                <div class="bg-white rounded-lg shadow-xl p-6 text-center">
+                    <span class="text-5xl">🏭</span>
+                    <h3 class="text-xl font-bold mt-4 mb-2 text-[#0073cc]">Alta Capacidad</h3>
+                    <p class="text-gray-600">Equipos modernos listos para 1,000-1,500 cestos al mes.</p>
+                </div>
+                <div class="bg-white rounded-lg shadow-xl p-6 text-center">
+                    <span class="text-5xl">📉</span>
+                    <h3 class="text-xl font-bold mt-4 mb-2 text-[#0073cc]">Poca Competencia</h3>
+                    <p class="text-gray-600">Cubrimos una necesidad real y no satisfecha en la zona.</p>
+                </div>
+                <div class="bg-white rounded-lg shadow-xl p-6 text-center">
+                    <span class="text-5xl">💸</span>
+                    <h3 class="text-xl font-bold mt-4 mb-2 text-[#0073cc]">Alta Rentabilidad</h3>
+                    <p class="text-gray-600">Fuerte margen de ganancia (80%) desde el inicio.</p>
+                </div>
+            </div>        
+        </section>
+
+        <section class="mb-12">
+            <h2 class="text-3xl font-bold text-center text-[#004f7c] mb-4">Innovación Tecnológica: El Flujo del Servicio</h2>
+             <p class="text-center text-lg text-gray-700 max-w-3xl mx-auto mb-8">
+                No somos solo una lavandería, somos una empresa de servicios tecnológicos. Nuestra app móvil propia profesionalizará el servicio, fidelizará clientes y optimizará toda nuestra logística.
+            </p>
+            <div class="bg-white rounded-lg shadow-xl p-6 md:p-8">
+                <div class="flex flex-col md:flex-row justify-around items-center space-y-6 md:space-y-0 md:space-x-4">
+                    
+                    <div class="text-center w-40">
+                        <span class="text-6xl">📱</span>
+                        <h3 class="text-lg font-bold mt-2">1. Cliente Programa</h3>
+                        <p class="text-sm text-gray-600">El cliente solicita recogida desde la app.</p>
+                    </div>
+
+                    <div class="text-4xl font-light text-[#00a8cc] md:hidden">▼</div>
+                    <div class="text-4xl font-light text-[#00a8cc] hidden md:block">→</div>
+
+                    <div class="text-center w-40">
+                        <span class="text-6xl">🚗</span>
+                        <h3 class="text-lg font-bold mt-2">2. Recogemos</h3>
+                        <p class="text-sm text-gray-600">Nuestro vehículo recoge la ropa en la hora pautada.</p>
+                    </div>
+
+                    <div class="text-4xl font-light text-[#00a8cc] md:hidden">▼</div>
+                    <div class="text-4xl font-light text-[#00a8cc] hidden md:block">→</div>
+
+                    <div class="text-center w-40">
+                        <span class="text-6xl">🧼</span>
+                        <h3 class="text-lg font-bold mt-2">3. Lavamos</h3>
+                        <p class="text-sm text-gray-600">Procesamos la ropa en nuestras instalaciones.</p>
+                    </div>
+
+                    <div class="text-4xl font-light text-[#00a8cc] md:hidden">▼</div>
+                    <div class="text-4xl font-light text-[#00a8cc] hidden md:block">→</div>
+
+                    <div class="text-center w-40">
+                        <span class="text-6xl">🔔</span>
+                        <h3 class="text-lg font-bold mt-2">4. Notificamos</h3>
+                        <p class="text-sm text-gray-600">El cliente recibe una alerta de que su ropa está lista.</p>
+                    </div>
+
+                    <div class="text-4xl font-light text-[#00a8cc] md:hidden">▼</div>
+                    <div class="text-4xl font-light text-[#00a8cc] hidden md:block">→</div>
+
+                    <div class="text-center w-40">
+                        <span class="text-6xl">🏠</span>
+                        <h3 class="text-lg font-bold mt-2">5. Entregamos</h3>
+                        <p class="text-sm text-gray-600">Devolvemos la ropa limpia y doblada.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-lg shadow-xl p-6 md:p-8 mt-8 text-center">
+                <h3 class="text-2xl font-bold text-[#004f7c] mb-4">✨ Innovación Continua de la App</h3>
+                <p class="text-gray-700 max-w-2xl mx-auto mb-6">Usa IA para proponer nuevas funciones para nuestra app y mantenernos por delante de la competencia.</p>
+                <button id="generateFeaturesBtn" class="bg-[#0073cc] text-white font-bold py-3 px-6 rounded-lg shadow-md hover:bg-[#005a9e] transition-colors">
+                    ✨ Sugerir Funciones para la App
+                </button>
+                <div id="featuresResult" class="bg-gray-50 p-4 rounded-lg shadow-inner mt-6 text-left hidden">
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-[#004f7c] text-white p-12 text-center">
+        <h2 class="text-3xl font-bold mb-4">Buscamos un Socio Estratégico</h2>
+        <p class="text-lg text-gray-300 max-w-2xl mx-auto">
+            Este es un proyecto local con alta rentabilidad, rápido retorno y un servicio diferenciador.
+            Buscamos un socio que desee ser parte de la transformación de los servicios en San Cristóbal.
+        </p>
+    </footer>
+
+    <div id="loadingModal" class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden items-center justify-center">
+        <div class="bg-white p-8 rounded-lg shadow-xl text-center">
+            <div class="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-[#0073cc] mx-auto"></div>
+            <p id="loadingMessage" class="mt-4 text-lg font-semibold text-gray-700">Cargando...</p>
+        </div>
+    </div>
+
+    <script>
+        const apiKey = "";
+        const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-09-2025:generateContent?key=${apiKey}`;
+
+        const loadingModal = document.getElementById('loadingModal');
+        const loadingMessage = document.getElementById('loadingMessage');
+
+        function showLoading(message = "Procesando...") {
+            loadingMessage.textContent = message;
+            loadingModal.classList.remove('hidden');
+            loadingModal.classList.add('flex');
+        }
+
+        function hideLoading() {
+            loadingModal.classList.add('hidden');
+            loadingModal.classList.remove('flex');
+        }
+
+        function showError(message) {
+            loadingMessage.textContent = message;
+            loadingModal.classList.remove('hidden');
+            loadingModal.classList.add('flex');
+            setTimeout(hideLoading, 3000);
+        }
+
+        async function callGeminiAPI(userPrompt, systemInstruction, retries = 3, delay = 1000) {
+            const payload = {
+                contents: [{ parts: [{ text: userPrompt }] }],
+                systemInstruction: {
+                    parts: [{ text: systemInstruction }]
+                },
+            };
+            
+            try {
+                const response = await fetch(apiUrl, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(payload)
+                });
+
+                if (!response.ok) {
+                    if (response.status === 429 && retries > 0) {
+                        await new Promise(res => setTimeout(res, delay));
+                        return callGeminiAPI(userPrompt, systemInstruction, retries - 1, delay * 2);
+                    }
+                    throw new Error(`Error HTTP: ${response.status}`);
+                }
+
+                const result = await response.json();
+                const candidate = result.candidates?.[0];
+                if (candidate && candidate.content?.parts?.[0]?.text) {
+                    return candidate.content.parts[0].text;
+                } else {
+                    throw new Error("No se pudo obtener una respuesta válida de la API.");
+                }
+            } catch (error) {
+                console.error("Error al llamar a la API de Gemini:", error);
+                throw error;
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+
+            const generateSloganBtn = document.getElementById('generateSloganBtn');
+            const sloganResult = document.getElementById('sloganResult');
+            const generateFeaturesBtn = document.getElementById('generateFeaturesBtn');
+            const featuresResult = document.getElementById('featuresResult');
+
+            if (generateSloganBtn) {
+                generateSloganBtn.addEventListener('click', async () => {
+                    showLoading("Generando eslogan...");
+                    const systemPrompt = "Actúa como un experto en marketing para una nueva lavandería premium. Genera 3 eslóganes cortos e impactantes.";
+                    const userPrompt = "La lavandería se enfoca en estas ventajas: Lavado por jampel (precio justo), Recogida y entrega a domicilio (único en la zona), Alta capacidad, Poca competencia, Alta rentabilidad, y tendrá una App móvil. Genera 3 eslóganes.";
+                    
+                    try {
+                        let responseText = await callGeminiAPI(userPrompt, systemPrompt);
+                        responseText = responseText.replace(/\n/g, '<br>');
+                        sloganResult.innerHTML = `<p class="text-gray-800">${responseText}</p>`;
+                        sloganResult.classList.remove('hidden');
+                    } catch (error) {
+                        showError("Error al generar el eslogan.");
+                        console.error(error);
+                    } finally {
+                        hideLoading();
+                    }
+                });
+            }
+
+            if (generateFeaturesBtn) {
+                generateFeaturesBtn.addEventListener('click', async () => {
+                    showLoading("Buscando ideas...");
+                    const systemPrompt = "Actúa como un diseñador de producto UX/UI. Sugiere 3 funciones innovadoras y accionables para la app de una lavandería, explicando brevemente el valor para el cliente. Sé creativo.";
+                    const userPrompt = "Nuestra app de lavandería ya permite programar recogidas y ver el historial. ¿Qué 3 funciones creativas se podrían añadir para fidelizar clientes y mejorar el servicio? Formatea la respuesta como una lista.";
+                    
+                    try {
+                        let responseText = await callGeminiAPI(userPrompt, systemPrompt);
+                        responseText = responseText.replace(/\n/g, '<br>');
+                        featuresResult.innerHTML = `<div class="text-gray-800">${responseText}</div>`;
+                        featuresResult.classList.remove('hidden');
+                    } catch (error) {
+                        showError("Error al generar funciones.");
+                        console.error(error);
+                    } finally {
+                        hideLoading();
+                    }
+                });
+            }
+
+            const mandatoryChartOptions = {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    tooltip: {
+                        callbacks: {
+                            title: function(tooltipItems) {
+                                const item = tooltipItems[0];
+                                let label = item.chart.data.labels[item.dataIndex];
+                                if (Array.isArray(label)) {
+                                    return label.join(' ');
+                                } else {
+                                    return label;
+                                }
+                            }
+                        }
+                    },
+                    legend: {
+                        labels: {
+                            font: {
+                                size: 14,
+                                family: 'Inter'
+                            }
+                        }
+                    }
+                }
+            };
+
+            const chartColors = ['#0073cc', '#00a8cc', '#80dfff', '#ffc107', '#004f7c'];
+
+            const ctxRevenue = document.getElementById('revenueChart').getContext('2d');
+            new Chart(ctxRevenue, {
+                type: 'doughnut',
+                data: {
+                    labels: [
+                        ['Lavado por', 'Jampel'],
+                        ['Piezas', 'Delicadas'],
+                        ['Envíos y', 'Entregas']
+                    ],
+                    datasets: [{
+                        label: 'Ingresos Mensuales',
+                        data: [109200, 26000, 12000],
+                        backgroundColor: chartColors,
+                        borderColor: '#ffffff',
+                        borderWidth: 2
+                    }]
+                },
+                options: { ...mandatoryChartOptions }
+            });
+
+            const ctxCosts = document.getElementById('costsChart').getContext('2d');
+            new Chart(ctxCosts, {
+                type: 'doughnut',
+                data: {
+                    labels: [
+                        'Alquiler',
+                        'Electricidad',
+                        'Gas',
+                        ['Agua y', 'Detergentes'],
+                        ['Insumos', 'Delicados']
+                    ],
+                    datasets: [{
+                        label: 'Costos Mensuales',
+                        data: [15000, 7176, 3200, 3200, 800],
+                        backgroundColor: chartColors,
+                        borderColor: '#ffffff',
+                        borderWidth: 2
+                    }]
+                },
+                options: { ...mandatoryChartOptions }
+            });
+
+            const ctxGrowth = document.getElementById('growthChart').getContext('2d');
+            new Chart(ctxGrowth, {
+                type: 'bar',
+                data: {
+                    labels: [
+                        ['Ingreso Inicial', 'Proyectado'],
+                        ['Ingreso a Plena', 'Capacidad']
+                    ],
+                    datasets: [{
+                        label: 'Potencial de Ingresos (RD$)',
+                        data: [147200, 350000],
+                        backgroundColor: ['#00a8cc', '#0073cc'],
+                        borderRadius: 4
+                    }]
+                },
+                options: {
+                    ...mandatoryChartOptions,
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            ticks: {
+                                callback: function(value) {
+                                    return 'RD$' + new Intl.NumberFormat('es-DO').format(value);
+                                }
+                            }
+                        }
+                    },
+                    plugins: {
+                        ...mandatoryChartOptions.plugins,
+                        legend: {
+                            display: false
+                        }
+                    }
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>
