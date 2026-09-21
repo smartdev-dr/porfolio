@@ -32,11 +32,11 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html lang="es" className="dark">
       <link rel="icon" type="image/svg+xml" href="/assets/img/logo/logo.png" />
       <meta name="google-site-verification" content="3yUvASO57j8k8w49UY_dFOfKYYMl9qJPudTZARWNyrM" />
       <script async src="https://www.googletagmanager.com/gtag/js?id=G-WBVPR4E1ZB"></script>
-      <body className={fontFamily}>
+      <body className={`${fontFamily} dark opened bg-[#08090c] text-white`}>
         <Preloader />
         <State>{children}</State>
       </body>

@@ -2,7 +2,7 @@
 import { kuraUtilit } from "@/utility";
 import { useEffect, useState } from "react";
 
-const Header = ({ dark }) => {
+const Header = ({ dark = true }) => {
   const [isToggled, setToggled] = useState(false);
   const toggleTrueFalse = () => {
     setToggled(!isToggled);
@@ -13,85 +13,104 @@ const Header = ({ dark }) => {
     kuraUtilit.audioSoundAndOpen();
     kuraUtilit.stickyNav();
     kuraUtilit.scrollToActiveNav();
-  });
+  }, []);
+
   return (
-    <div className="kura_tm_topbar fixed top-0 left-0 right-0 z-[10] translate-y-[-100%] transition-all duration-[400ms]">
-      <div className="wrapper w-full h-auto clear-both float-left transition-all duration-300">
-        <div className="topbar_inner w-full h-auto clear-both flex items-center justify-between py-[30px] pr-[37px] pl-[50px] transition-all duration-300">
-          <div className="logo rounded-[40px] relative">
-            <a href="#">
-              <img
-                className="max-w-[70px] max-h-[70px] "
-                src={
-                  dark ? "assets/img/logo/logo.png" : "assets/img/logo/dark.png"
-                }
-                alt=""
-              />
+    <header className="kura_tm_topbar fixed top-0 left-0 right-0 z-50 transition-all duration-300">
+      <div className="wrapper w-full h-auto">
+        <div className="topbar_inner w-full flex items-center justify-between py-4 px-6 md:px-12 bg-[#090a0f]/80 backdrop-blur-xl border-b border-zinc-800/80 transition-all duration-300">
+          {/* Logo with 3D Aura */}
+          <div className="logo flex items-center gap-3">
+            <a href="#home" className="flex items-center gap-3 group">
+              <div className="relative">
+                <img
+                  className="w-10 h-10 md:w-12 md:h-12 object-contain group-hover:scale-105 transition-transform duration-300"
+                  src="assets/img/logo/logo.png"
+                  alt="SMARTDEV Logo"
+                />
+                <div className="absolute inset-0 bg-[#ff4522]/30 rounded-full blur-md opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none" />
+              </div>
+              <span className="text-lg md:text-xl font-black tracking-tight text-white flex items-center">
+                SMART<span className="text-[#ff4522]">DEV</span>
+              </span>
             </a>
           </div>
-          <div className="menu flex items-center">
-            <div className="list pr-[40px]">
-              <ul className="anchor_nav" id="anchor_nav">
-                <li className="current mr-[20px] inline-block opacity-0 invisible relative left-[10px] transition-all duration-300">
+
+          {/* Nav Menu */}
+          <div className="menu flex items-center gap-6">
+            <nav className="list hidden md:block">
+              <ul className="anchor_nav flex items-center gap-5" id="anchor_nav">
+                <li>
                   <a
-                    className="text-black font-poppins transition-all duration-300"
+                    className="text-xs font-semibold text-zinc-300 hover:text-[#ff4522] transition-colors uppercase tracking-wider"
                     href="#home"
                   >
                     Inicio
                   </a>
                 </li>
-                <li className="mr-[20px] inline-block opacity-0 invisible relative left-[10px] transition-all duration-300">
+                <li>
                   <a
-                    className="text-black font-poppins transition-all duration-300"
+                    className="text-xs font-semibold text-zinc-300 hover:text-[#ff4522] transition-colors uppercase tracking-wider"
+                    href="#soluciones"
+                  >
+                    Soluciones
+                  </a>
+                </li>
+                <li>
+                  <a
+                    className="text-xs font-semibold text-zinc-300 hover:text-[#ff4522] transition-colors uppercase tracking-wider"
+                    href="#capacidades"
+                  >
+                    Capacidades IA
+                  </a>
+                </li>
+                <li>
+                  <a
+                    className="text-xs font-semibold text-zinc-300 hover:text-[#ff4522] transition-colors uppercase tracking-wider"
                     href="#portfolio"
                   >
-                    Proyectos
+                    Casos de Éxito
                   </a>
                 </li>
-                <li className="mr-[20px] inline-block opacity-0 invisible relative left-[10px] transition-all duration-300">
+                <li>
                   <a
-                    className="text-black font-poppins transition-all duration-300"
-                    href="#skills"
+                    className="text-xs font-semibold text-zinc-300 hover:text-[#ff4522] transition-colors uppercase tracking-wider"
+                    href="#metodologia"
                   >
-                    Habilidades
+                    Metodología
                   </a>
                 </li>
-                <li className="mr-[20px] inline-block opacity-0 invisible relative left-[10px] transition-all duration-300">
+                <li>
                   <a
-                    className="text-black font-poppins transition-all duration-300"
-                    href="#timeline"
+                    className="text-xs font-semibold text-zinc-300 hover:text-[#ff4522] transition-colors uppercase tracking-wider"
+                    href="#evaluador"
                   >
-                    Personal
+                    Diagnóstico IA
                   </a>
                 </li>
-                <li className="mr-[20px] inline-block opacity-0 invisible relative left-[10px] transition-all duration-300">
+                <li>
                   <a
-                    className="text-black font-poppins transition-all duration-300"
-                    href="#price"
-                  >
-                    Servicios
-                  </a>
-                </li>
-                <li className="mr-[20px] inline-block opacity-0 invisible relative left-[10px] transition-all duration-300">
-                  <a
-                    className="text-black font-poppins transition-all duration-300"
-                    href="#news"
-                  >
-                    Noticias
-                  </a>
-                </li>
-                <li className="inline-block opacity-0 invisible relative left-[10px] transition-all duration-300">
-                  <a
-                    className="text-black font-poppins transition-all duration-300"
+                    className="text-xs font-semibold text-zinc-300 hover:text-[#ff4522] transition-colors uppercase tracking-wider"
                     href="#contact"
                   >
                     Contacto
                   </a>
                 </li>
               </ul>
-            </div>
+            </nav>
+
+            {/* Quick Contact CTA */}
+            <a
+              href="#contact"
+              className="hidden sm:inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-[#ff4522]/15 border border-[#ff4522]/40 text-[#ff6a49] hover:bg-[#ff4522] hover:text-white text-xs font-semibold uppercase tracking-wider transition-all duration-300 shadow-[0_0_15px_rgba(255,69,34,0.2)]"
+            >
+              <span className="w-1.5 h-1.5 rounded-full bg-[#ff4522] animate-pulse" />
+              Cotizar
+            </a>
+
+            {/* Mobile Hamburger Trigger */}
             <div
-              className="trigger leading-[1]"
+              className="trigger leading-[1] md:hidden cursor-pointer p-2 rounded-lg bg-zinc-800/80 border border-zinc-700"
               onClick={() => toggleTrueFalse()}
             >
               <div
@@ -100,14 +119,14 @@ const Header = ({ dark }) => {
                 }`}
               >
                 <div className="hamburger-box">
-                  <div className="hamburger-inner" />
+                  <div className="hamburger-inner !bg-white after:!bg-white before:!bg-white" />
                 </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
+    </header>
   );
 };
 export default Header;

@@ -1,19 +1,142 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Mulish:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;0,1000;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900;1,1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 :root {
   --font-poppins: "Poppins", sans-serif;
   --font-mulish: "Mulish", sans-serif;
   --font-montserrat: "Montserrat", sans-serif;
+  --secondary-color: #ff4522;
+  --main-color: #ff4522;
+  --bg-dark: #08090c;
+  --bg-card: rgba(18, 19, 26, 0.75);
+  --border-glow: rgba(255, 69, 34, 0.25);
 }
 
 html {
   scroll-behavior: smooth;
+  background-color: #08090c !important;
+  color: #ffffff !important;
 }
+
+body {
+  background-color: #08090c !important;
+  overflow-x: hidden;
+  color: #f4f4f5 !important;
+  font-family: var(--font-poppins);
+}
+
+.kura_tm_topbar {
+  transform: translateY(0) !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+
+.kura_tm_topbar .list ul li {
+  opacity: 1 !important;
+  visibility: visible !important;
+  left: 0 !important;
+}
+
+#preloader,
+#preloader::before,
+#preloader::after,
+.loader_line,
+.waxon_tm_preloader {
+  display: none !important;
+  opacity: 0 !important;
+  visibility: hidden !important;
+  pointer-events: none !important;
+  z-index: -99999 !important;
+}
+
+/* Custom 3D Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #08090c;
+}
+::-webkit-scrollbar-thumb {
+  background: #27272a;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--secondary-color);
+}
+
+/* 3D Glassmorphism Utilities */
+.glass-panel {
+  background: rgba(16, 17, 24, 0.7);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.4);
+}
+
+.glass-panel-glow {
+  background: rgba(18, 19, 28, 0.8);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 69, 34, 0.25);
+  box-shadow: 0 10px 40px -10px rgba(255, 69, 34, 0.2);
+}
+
+.glass-panel-glow:hover {
+  border-color: rgba(255, 69, 34, 0.55);
+  box-shadow: 0 15px 50px -10px rgba(255, 69, 34, 0.35);
+}
+
+/* 3D Transform Utilities */
+.preserve-3d {
+  transform-style: preserve-3d;
+}
+.perspective-1000 {
+  perspective: 1000px;
+}
+.translate-z-10 {
+  transform: translateZ(10px);
+}
+.translate-z-20 {
+  transform: translateZ(20px);
+}
+.translate-z-30 {
+  transform: translateZ(30px);
+}
+
+/* Glow Badges */
+.badge-neon {
+  background: rgba(255, 69, 34, 0.12);
+  border: 1px solid rgba(255, 69, 34, 0.4);
+  color: #ff6846;
+  box-shadow: 0 0 15px rgba(255, 69, 34, 0.2);
+}
+
+/* Pulse animation */
+@keyframes neonPulse {
+  0%, 100% {
+    opacity: 0.8;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.03);
+  }
+}
+
+.animate-neon-pulse {
+  animation: neonPulse 3s ease-in-out infinite;
+}
+
 .c-pointer {
   cursor: pointer;
 }
-/* image popup */
+
+/* Image popup */
 img.mfp-img {
-  box-shadow: 0 0 8px rgb(0 0 0 / 60%);
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.8);
   position: absolute;
   max-height: 392px;
   padding: 0 !important;
@@ -30,5 +153,5 @@ img.mfp-img {
 }
 .main-menu li.active > a,
 .header-navigation .main-menu ul > li.has-children.active > a:after {
-  color: #ff344f !important;
+  color: #ff4522 !important;
 }

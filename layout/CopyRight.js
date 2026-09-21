@@ -1,71 +1,21 @@
 const CopyRight = () => {
   return (
-    <div className="kura_tm_section w-full h-auto clear-both float-left">
-      <div className="kura_tm_copyright w-full h-auto clear-both float-left bg-black px-0 pt-[28px] pb-[32px] text-center">
-        <div className="container">
-          <div
-            className="copyright_inner w-full h-auto clear-both float-left flex items-center justify-between wow fadeInUp"
-            data-wow-duration=".7s"
-          >
-            <div className="text">
-              <p className="text-white">
-                Copyright © 2025 SmartDev. Todos los derechos reservados.
-              </p>
-            </div>
-            <div className="social">
-              <ul>
-                <li className="mr-[20px] inline-block">
-                  <a className="text-white" href="#">
-                    <img
-                      className="svg"
-                      src="assets/img/svg/social/facebook.svg"
-                      alt=""
-                    />
-                  </a>
-                </li>
-                <li className="mr-[20px] inline-block">
-                  <a className="text-white" href="#">
-                    <img
-                      className="svg"
-                      src="assets/img/svg/social/twitter.svg"
-                      alt=""
-                    />
-                  </a>
-                </li>
-                <li className="mr-[20px] inline-block">
-                  <a className="text-white" href="#">
-                    <img
-                      className="svg"
-                      src="assets/img/svg/social/instagram.svg"
-                      alt=""
-                    />
-                  </a>
-                </li>
-                <li className="mr-[20px] inline-block">
-                  <a className="text-white" href="#">
-                    <img
-                      className="svg"
-                      src="assets/img/svg/social/dribbble.svg"
-                      alt=""
-                    />
-                  </a>
-                </li>
-                <li className="inline-block">
-                  <a className="text-white" href="#">
-                    <img
-                      className="svg"
-                      src="assets/img/svg/social/tik-tok.svg"
-                      alt=""
-                    />
-                  </a>
-                </li>
-                {/* If you want to change or add any svg icons you can download here for free www.flaticon.com */}
-              </ul>
-            </div>
+    <footer className="kura_tm_section w-full border-t border-zinc-800/80 bg-black">
+      <div className="container mx-auto px-6 py-8">
+        <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
+          <div className="text">
+            <p className="text-xs text-zinc-400">
+              Copyright © 2025 <span className="text-white font-semibold">SMARTDEV</span>. Todos los derechos reservados.
+            </p>
+          </div>
+          <div className="flex items-center gap-6 text-xs text-zinc-400">
+            <span className="font-mono text-[11px] text-[#ff6846]">
+              ● Santo Domingo, República Dominicana
+            </span>
           </div>
         </div>
       </div>
-    </div>
+    </footer>
   );
 };
 export default CopyRight;
