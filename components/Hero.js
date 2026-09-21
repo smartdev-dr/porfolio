@@ -64,9 +64,11 @@ const Hero = () => {
                 <span className="w-2 h-2 rounded-full bg-[#ff4522] animate-ping" />
                 AGENCIA DE INTELIGENCIA ARTIFICIAL APLICADA
               </span>
-              <span className="inline-flex items-center px-3 py-1.5 rounded-full bg-zinc-900 border border-zinc-700 text-zinc-300 text-xs font-medium">
-                ⚡ SOFTWARE FACTORY FULL-STACK
+              <span className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#ff4522]/15 border border-[#ff4522]/40 text-[#ff6a49] text-xs font-semibold tracking-wide shadow-[0_0_15px_rgba(255,69,34,0.2)]">
+                <span className="w-2 h-2 rounded-full bg-[#ff4522] animate-ping" />
+                SOFTWARE FACTORY
               </span>
+
             </div>
 
             {/* Main Headline */}
@@ -207,11 +209,10 @@ const Hero = () => {
                       setActiveVisual(idx);
                       setInteractiveMode(false);
                     }}
-                    className={`flex items-center gap-2 px-3 py-2 rounded-xl text-xs font-semibold transition-all border ${
-                      !interactiveMode && activeVisual === idx
-                        ? "bg-[#ff4522] text-white border-[#ff4522] shadow-[0_0_15px_rgba(255,69,34,0.4)]"
-                        : "bg-zinc-900/90 border-zinc-800 text-zinc-400 hover:text-white hover:border-zinc-700"
-                    }`}
+                    className={`flex items-center gap-2 px-3 py-2 rounded-xl text-xs font-semibold transition-all border ${!interactiveMode && activeVisual === idx
+                      ? "bg-[#ff4522] text-white border-[#ff4522] shadow-[0_0_15px_rgba(255,69,34,0.4)]"
+                      : "bg-zinc-900/90 border-zinc-800 text-zinc-400 hover:text-white hover:border-zinc-700"
+                      }`}
                   >
                     <span className="w-4 h-4 rounded overflow-hidden shrink-0 border border-white/20 hidden sm:inline-block">
                       <img
@@ -231,11 +232,10 @@ const Hero = () => {
               <button
                 type="button"
                 onClick={() => setInteractiveMode(!interactiveMode)}
-                className={`px-3 py-2 rounded-xl text-xs font-semibold transition-all border flex items-center gap-1.5 ${
-                  interactiveMode
-                    ? "bg-[#ff4522] text-white border-[#ff4522] shadow-[0_0_15px_rgba(255,69,34,0.4)]"
-                    : "bg-zinc-900/90 border-zinc-800 text-zinc-400 hover:text-[#ff8066] hover:border-[#ff4522]/40"
-                }`}
+                className={`px-3 py-2 rounded-xl text-xs font-semibold transition-all border flex items-center gap-1.5 ${interactiveMode
+                  ? "bg-[#ff4522] text-white border-[#ff4522] shadow-[0_0_15px_rgba(255,69,34,0.4)]"
+                  : "bg-zinc-900/90 border-zinc-800 text-zinc-400 hover:text-[#ff8066] hover:border-[#ff4522]/40"
+                  }`}
               >
                 <span>✦</span>
                 <span>{interactiveMode ? "Ver Render 3D" : "WebGL 3D"}</span>

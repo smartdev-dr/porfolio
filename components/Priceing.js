@@ -80,17 +80,16 @@ const Priceing = () => {
             <TiltCard
               key={service.id}
               maxTilt={8}
-              className={`p-8 rounded-3xl flex flex-col justify-between group shadow-xl transition-all ${
-                service.highlight
+              className={`p-8 rounded-3xl flex flex-col justify-between group shadow-xl transition-all ${service.highlight
                   ? "bg-gradient-to-b from-zinc-900/95 via-black to-zinc-950 border-2 border-[#ff4522] shadow-[0_0_40px_rgba(255,69,34,0.3)] relative"
                   : "bg-zinc-900/70 border border-zinc-800 hover:border-[#ff4522]/50"
-              }`}
+                }`}
             >
-              {service.highlight && (
+              {/* {service.highlight && (
                 <div className="absolute -top-3.5 left-1/2 -translate-x-1/2 px-4 py-1 rounded-full bg-gradient-to-r from-[#ff4522] to-[#ff2a5f] text-white text-[11px] font-black uppercase tracking-wider shadow-lg">
                   ⭐ Recomendado
                 </div>
-              )}
+              )} */}
 
               <div>
                 <div className="flex items-center justify-between mb-4">
@@ -125,11 +124,10 @@ const Priceing = () => {
               {/* Action Button */}
               <a
                 href="#contact"
-                className={`w-full py-3.5 rounded-xl font-bold text-xs uppercase tracking-wider transition-all text-center block ${
-                  service.highlight
+                className={`w-full py-3.5 rounded-xl font-bold text-xs uppercase tracking-wider transition-all text-center block ${service.highlight
                     ? "bg-gradient-to-r from-[#ff4522] to-[#ff2a5f] text-white shadow-[0_0_20px_rgba(255,69,34,0.4)] hover:shadow-[0_0_30px_rgba(255,69,34,0.7)] hover:scale-102"
                     : "bg-zinc-800/80 hover:bg-[#ff4522] text-zinc-200 hover:text-white border border-zinc-700 hover:border-[#ff4522]"
-                }`}
+                  }`}
               >
                 {service.cta}
               </a>
