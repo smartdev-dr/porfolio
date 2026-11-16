@@ -43,7 +43,7 @@ const Portfolio = () => {
     category: "Plataforma Web • App Móvil • Cloud Backend",
     type: "mobile",
     date: "Enero 2025",
-    page: "https://app.enter.com.do/Login",
+    page: "https://notfound.com/",
     hero: "/assets/img/portfolio/2En.png",
     cardImg: "/assets/img/portfolio/0En.png",
     tags: ["Flutter", "Next.js", "QR Engine", "APIs"],
@@ -64,7 +64,7 @@ const Portfolio = () => {
     category: "App Móvil • Backend Cloud • Facturación",
     type: "mobile",
     date: "Enero 2025",
-    page: "https://app.enter.com.do/Login",
+    page: "https://notfound.com",
     hero: "/assets/img/portfolio/1IA.png",
     cardImg: "/assets/img/portfolio/0IA.png",
     tags: ["Mobile POS", "Bluetooth SDK", "Facturación"],
@@ -129,33 +129,30 @@ const Portfolio = () => {
             <button
               type="button"
               onClick={() => setFilter("all")}
-              className={`px-4 py-2 rounded-lg text-xs font-semibold transition-all ${
-                filter === "all"
-                  ? "bg-[#ff4522] text-white shadow-[0_0_15px_rgba(255,69,34,0.4)]"
-                  : "text-zinc-400 hover:text-white"
-              }`}
+              className={`px-4 py-2 rounded-lg text-xs font-semibold transition-all ${filter === "all"
+                ? "bg-[#ff4522] text-white shadow-[0_0_15px_rgba(255,69,34,0.4)]"
+                : "text-zinc-400 hover:text-white"
+                }`}
             >
               Todos ({projects.length})
             </button>
             <button
               type="button"
               onClick={() => setFilter("web")}
-              className={`px-4 py-2 rounded-lg text-xs font-semibold transition-all ${
-                filter === "web"
-                  ? "bg-[#ff4522] text-white shadow-[0_0_15px_rgba(255,69,34,0.4)]"
-                  : "text-zinc-400 hover:text-white"
-              }`}
+              className={`px-4 py-2 rounded-lg text-xs font-semibold transition-all ${filter === "web"
+                ? "bg-[#ff4522] text-white shadow-[0_0_15px_rgba(255,69,34,0.4)]"
+                : "text-zinc-400 hover:text-white"
+                }`}
             >
               Web Platforms
             </button>
             <button
               type="button"
               onClick={() => setFilter("mobile")}
-              className={`px-4 py-2 rounded-lg text-xs font-semibold transition-all ${
-                filter === "mobile"
-                  ? "bg-[#ff4522] text-white shadow-[0_0_15px_rgba(255,69,34,0.4)]"
-                  : "text-zinc-400 hover:text-white"
-              }`}
+              className={`px-4 py-2 rounded-lg text-xs font-semibold transition-all ${filter === "mobile"
+                ? "bg-[#ff4522] text-white shadow-[0_0_15px_rgba(255,69,34,0.4)]"
+                : "text-zinc-400 hover:text-white"
+                }`}
             >
               Apps Móviles
             </button>
