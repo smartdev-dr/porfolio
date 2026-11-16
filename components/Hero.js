@@ -47,32 +47,32 @@ const Hero = () => {
 
   return (
     <section
-      className="kura_tm_section w-full min-h-screen relative overflow-hidden pt-[110px] pb-[70px] flex items-center bg-[#07080c]"
+      className="kura_tm_section w-full min-h-screen relative overflow-hidden  pb-[50px] sm:pb-[70px] flex items-center bg-[#07080c]"
       id="home"
     >
       {/* Background Ambient Glows */}
-      <div className="absolute top-1/4 left-1/4 w-[650px] h-[650px] bg-[#ff4522]/15 rounded-full blur-[180px] pointer-events-none" />
-      <div className="absolute bottom-10 right-10 w-[550px] h-[550px] bg-[#ff344f]/10 rounded-full blur-[190px] pointer-events-none" />
+      <div className="absolute top-1/4 left-1/4 w-[300px] sm:w-[650px] h-[300px] sm:h-[650px] bg-[#ff4522]/10 sm:bg-[#ff4522]/15 rounded-full blur-[120px] sm:blur-[180px] pointer-events-none" />
+      <div className="absolute bottom-10 right-10 w-[250px] sm:w-[550px] h-[250px] sm:h-[550px] bg-[#ff344f]/8 sm:bg-[#ff344f]/10 rounded-full blur-[120px] sm:blur-[190px] pointer-events-none" />
 
-      <div className="container mx-auto px-6 relative z-10">
+      <div className="container mx-auto px-4 sm:px-6 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
           {/* Left Column: Value Proposition & CTAs */}
           <div className="lg:col-span-6 flex flex-col justify-center">
             {/* Dual Authority Badges */}
-            <div className="flex flex-wrap items-center gap-2.5 mb-6">
-              <span className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#ff4522]/15 border border-[#ff4522]/40 text-[#ff6a49] text-xs font-semibold tracking-wide shadow-[0_0_15px_rgba(255,69,34,0.2)]">
-                <span className="w-2 h-2 rounded-full bg-[#ff4522] animate-ping" />
-                AGENCIA DE INTELIGENCIA ARTIFICIAL APLICADA
+            <div className="flex flex-wrap items-center gap-2 mb-5 sm:mb-6">
+              <span className="inline-flex items-center gap-1.5 px-2.5 py-1 sm:px-3.5 sm:py-1.5 rounded-full bg-[#ff4522]/15 border border-[#ff4522]/40 text-[#ff6a49] text-[10px] sm:text-xs font-semibold tracking-wide shadow-[0_0_15px_rgba(255,69,34,0.2)]">
+                <span className="w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full bg-[#ff4522] animate-ping shrink-0" />
+                AGENCIA IA APLICADA
               </span>
-              <span className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#ff4522]/15 border border-[#ff4522]/40 text-[#ff6a49] text-xs font-semibold tracking-wide shadow-[0_0_15px_rgba(255,69,34,0.2)]">
-                <span className="w-2 h-2 rounded-full bg-[#ff4522] animate-ping" />
+              <span className="inline-flex items-center gap-1.5 px-2.5 py-1 sm:px-3.5 sm:py-1.5 rounded-full bg-[#ff4522]/15 border border-[#ff4522]/40 text-[#ff6a49] text-[10px] sm:text-xs font-semibold tracking-wide shadow-[0_0_15px_rgba(255,69,34,0.2)]">
+                <span className="w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full bg-[#ff4522] animate-ping shrink-0" />
                 SOFTWARE FACTORY
               </span>
 
             </div>
 
             {/* Main Headline */}
-            <h1 className="text-4xl sm:text-5xl xl:text-6xl font-black text-white leading-[1.08] mb-6 tracking-tight">
+            <h1 className="text-[1.75rem] leading-[1.12] sm:text-4xl md:text-5xl xl:text-6xl font-black text-white sm:leading-[1.08] mb-4 sm:mb-6 tracking-tight">
               Ingeniería de Software y{" "}
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#ff4522] via-[#ff6846] to-[#ff344f]">
                 Soluciones Reales de IA
@@ -80,58 +80,58 @@ const Hero = () => {
               para Empresas
             </h1>
 
-            <p className="text-base sm:text-lg text-zinc-300 font-normal leading-relaxed mb-8 max-w-2xl">
+            <p className="text-sm sm:text-base md:text-lg text-zinc-300 font-normal leading-relaxed mb-6 sm:mb-8 max-w-2xl">
               Ayudamos a <strong>pequeñas, medianas y grandes empresas</strong> a integrar inteligencia artificial en sus operaciones diarias: automatizamos procesos manuales, creamos agentes autónomos y desarrollamos plataformas de software a medida que generan rentabilidad comprobable.
             </p>
 
             {/* CTA Buttons */}
-            <div className="flex flex-wrap items-center gap-4 mb-8">
+            <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4 mb-6 sm:mb-8">
               <a
                 href="#evaluador"
-                className="px-7 py-4 rounded-xl bg-gradient-to-r from-[#ff4522] to-[#ff2a5f] text-white font-bold text-sm shadow-[0_0_25px_rgba(255,69,34,0.4)] hover:shadow-[0_0_35px_rgba(255,69,34,0.7)] hover:scale-105 active:scale-95 transition-all duration-300 flex items-center gap-2"
+                className="px-5 sm:px-7 py-3.5 sm:py-4 rounded-xl bg-gradient-to-r from-[#ff4522] to-[#ff2a5f] text-white font-bold text-xs sm:text-sm shadow-[0_0_25px_rgba(255,69,34,0.4)] hover:shadow-[0_0_35px_rgba(255,69,34,0.7)] hover:scale-105 active:scale-95 transition-all duration-300 flex items-center justify-center gap-2"
               >
                 <span>Diagnosticar mi Empresa con IA</span>
                 <span>✦</span>
               </a>
               <a
                 href="#soluciones"
-                className="px-7 py-4 rounded-xl bg-zinc-900/90 hover:bg-zinc-800 text-zinc-200 font-semibold text-sm border border-zinc-700 hover:border-[#ff4522]/50 hover:text-white transition-all duration-300"
+                className="px-5 sm:px-7 py-3.5 sm:py-4 rounded-xl bg-zinc-900/90 hover:bg-zinc-800 text-zinc-200 font-semibold text-xs sm:text-sm border border-zinc-700 hover:border-[#ff4522]/50 hover:text-white transition-all duration-300 text-center"
               >
                 Ver Soluciones por Escala
               </a>
             </div>
 
             {/* Key Value Metrics */}
-            <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 pt-6 border-t border-zinc-800/80">
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4 pt-5 sm:pt-6 border-t border-zinc-800/80">
               <div>
-                <div className="text-2xl sm:text-3xl font-black text-white tracking-tight">
+                <div className="text-xl sm:text-2xl md:text-3xl font-black text-white tracking-tight">
                   10<span className="text-[#ff4522]">+</span>
                 </div>
-                <div className="text-[11px] text-zinc-400 font-medium uppercase tracking-wider">
+                <div className="text-[10px] sm:text-[11px] text-zinc-400 font-medium uppercase tracking-wider">
                   Años de Innovación
                 </div>
               </div>
               <div>
-                <div className="text-2xl sm:text-3xl font-black text-white tracking-tight">
+                <div className="text-xl sm:text-2xl md:text-3xl font-black text-white tracking-tight">
                   100<span className="text-[#ff4522]">+</span>
                 </div>
-                <div className="text-[11px] text-zinc-400 font-medium uppercase tracking-wider">
+                <div className="text-[10px] sm:text-[11px] text-zinc-400 font-medium uppercase tracking-wider">
                   Proyectos Entregados
                 </div>
               </div>
               <div>
-                <div className="text-2xl sm:text-3xl font-black text-[#ff6a49] tracking-tight">
+                <div className="text-xl sm:text-2xl md:text-3xl font-black text-[#ff6a49] tracking-tight">
                   -60<span className="text-white">%</span>
                 </div>
-                <div className="text-[11px] text-zinc-400 font-medium uppercase tracking-wider">
+                <div className="text-[10px] sm:text-[11px] text-zinc-400 font-medium uppercase tracking-wider">
                   Costos Operativos
                 </div>
               </div>
               <div>
-                <div className="text-2xl sm:text-3xl font-black text-white tracking-tight">
+                <div className="text-xl sm:text-2xl md:text-3xl font-black text-white tracking-tight">
                   99.9<span className="text-[#ff4522]">%</span>
                 </div>
-                <div className="text-[11px] text-zinc-400 font-medium uppercase tracking-wider">
+                <div className="text-[10px] sm:text-[11px] text-zinc-400 font-medium uppercase tracking-wider">
                   Disponibilidad Cloud
                 </div>
               </div>

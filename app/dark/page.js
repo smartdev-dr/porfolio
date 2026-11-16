@@ -30,7 +30,7 @@ const IndexDark = () => {
       <MobileMenu dark={true} />
       {/* /MOBILE MENU */}
       {/* TOPBAR */}
-      <Header dark={true} />
+
       {/* HERO */}
       <Hero />
       {/* /HERO */}

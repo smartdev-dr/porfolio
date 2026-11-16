@@ -16,20 +16,20 @@ const Header = ({ dark = true }) => {
   }, []);
 
   return (
-    <header className="kura_tm_topbar fixed top-0 left-0 right-0 z-50 transition-all duration-300">
+    <header className="duration-300">
       <div className="wrapper w-full h-auto">
         <div className="topbar_inner w-full flex items-center justify-between py-4 px-6 md:px-12 bg-[#090a0f]/80 backdrop-blur-xl border-b border-zinc-800/80 transition-all duration-300">
           {/* Logo with 3D Aura */}
           <div className="logo flex items-center gap-3">
             <a href="#home" className="flex items-center gap-3 group">
-              <div className="relative">
+              {/* <div className="relative">
                 <img
                   className="w-10 h-10 md:w-12 md:h-12 object-contain group-hover:scale-105 transition-transform duration-300"
-                  src="assets/img/logo/logo.png"
+                  src="/assets/img/logo/logo.png"
                   alt="SMARTDEV Logo"
                 />
                 <div className="absolute inset-0 bg-[#ff4522]/30 rounded-full blur-md opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none" />
-              </div>
+              </div> */}
               <span className="text-lg md:text-xl font-black tracking-tight text-white flex items-center">
                 SMART<span className="text-[#ff4522]">DEV</span>
               </span>
@@ -102,27 +102,11 @@ const Header = ({ dark = true }) => {
             {/* Quick Contact CTA */}
             <a
               href="#contact"
-              className="hidden sm:inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-[#ff4522]/15 border border-[#ff4522]/40 text-[#ff6a49] hover:bg-[#ff4522] hover:text-white text-xs font-semibold uppercase tracking-wider transition-all duration-300 shadow-[0_0_15px_rgba(255,69,34,0.2)]"
+              className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-[#ff4522]/15 border border-[#ff4522]/40 text-[#ff6a49] hover:bg-[#ff4522] hover:text-white text-xs font-semibold uppercase tracking-wider transition-all duration-300 shadow-[0_0_15px_rgba(255,69,34,0.2)]"
             >
               <span className="w-1.5 h-1.5 rounded-full bg-[#ff4522] animate-pulse" />
               Cotizar
             </a>
-
-            {/* Mobile Hamburger Trigger */}
-            <div
-              className="trigger leading-[1] md:hidden cursor-pointer p-2 rounded-lg bg-zinc-800/80 border border-zinc-700"
-              onClick={() => toggleTrueFalse()}
-            >
-              <div
-                className={`hamburger hamburger--slider ${
-                  isToggled ? " is-active" : ""
-                }`}
-              >
-                <div className="hamburger-box">
-                  <div className="hamburger-inner !bg-white after:!bg-white before:!bg-white" />
-                </div>
-              </div>
-            </div>
           </div>
         </div>
       </div>

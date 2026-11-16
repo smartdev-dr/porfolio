@@ -28,16 +28,38 @@ body {
   font-family: var(--font-poppins);
 }
 
-.kura_tm_topbar {
-  transform: translateY(0) !important;
-  opacity: 1 !important;
-  visibility: visible !important;
+/* Desktop header: ensure visible when not hidden by Tailwind responsive class */
+@media (min-width: 1024px) {
+  .kura_tm_topbar {
+    display: block !important;
+    transform: translateY(0) !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+  }
 }
 
 .kura_tm_topbar .list ul li {
   opacity: 1 !important;
   visibility: visible !important;
   left: 0 !important;
+}
+
+/* Sticky header animation on scroll */
+.kura_tm_topbar.animate {
+  background: rgba(9, 10, 15, 0.95);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5), 0 0 15px rgba(255, 69, 34, 0.08);
+}
+
+/* Mobile menu: prevent overflow and distortion */
+@media (max-width: 1023px) {
+  .kura_tm_mobile_menu {
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+  }
 }
 
 #preloader,

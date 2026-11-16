@@ -28,7 +28,7 @@ const Index = () => {
       <Background3DGrid />
 
       {/* MOBILE MENU */}
-      <MobileMenu />
+      {/* <MobileMenu /> */}
 
       {/* TOPBAR */}
       <Header />

@@ -1,105 +1,111 @@
 "use client";
 import { useState } from "react";
 
-const MobileMenu = ({ dark }) => {
-  const [toggle, setToggle] = useState(false);
+const navLinks = [
+  { name: "Inicio", href: "#home" },
+  { name: "Soluciones por Escala", href: "#soluciones" },
+  { name: "Capacidades IA", href: "#capacidades" },
+  { name: "Casos de Éxito", href: "#portfolio" },
+  { name: "Metodología", href: "#metodologia" },
+  { name: "Diagnóstico IA", href: "#evaluador" },
+  { name: "Contacto", href: "#contact" },
+];
+
+const MobileMenu = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const handleLinkClick = () => {
+    setIsOpen(false);
+  };
+
   return (
-    <div className="kura_tm_mobile_menu w-full h-auto fixed top-0 left-0 hidden z-[10] middle:block">
-      <div className="mobile_menu_inner w-full h-auto clear-both float-left bg-white py-[15px] pr-[30px] pl-[40px]">
-        <div className="mobile_in w-full h-auto clear-both float-left flex items-center justify-between">
-          <div className="logo">
-            <a href="#">
-              <img
-                className="max-w-[80px] max-h-[50px]"
-                src={
-                  dark ? "assets/img/logo/logo.png" : "assets/img/logo/dark.png"
-                }
-                alt=""
-              />
+    <div className="kura_tm_mobile_menu w-full h-auto fixed top-0 left-0 right-0 block lg:hidden z-[9999]">
+      {/* Topbar Bar */}
+      <div className="w-full bg-[#090a0f]/95 backdrop-blur-xl border-b border-zinc-800/80 px-4 py-3 flex items-center justify-between shadow-2xl relative z-20">
+        {/* Brand Logo */}
+        <a href="#home" className="flex items-center gap-2 group shrink-0" onClick={handleLinkClick}>
+          <div className="relative w-8 h-8 shrink-0">
+            <img
+              className="w-8 h-8 object-contain"
+              src="/assets/img/logo/logo.png"
+              alt="SMARTDEV Logo"
+            />
+            <div className="absolute inset-0 bg-[#ff4522]/20 rounded-full blur-md opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none" />
+          </div>
+          <span className="text-sm font-black tracking-tight text-white flex items-center">
+            SMART<span className="text-[#ff4522]">DEV11</span>
+          </span>
+        </a>
+
+        {/* Custom Animated Hamburger Button */}
+        <button
+          type="button"
+          onClick={() => setIsOpen(!isOpen)}
+          aria-label={isOpen ? "Cerrar menú" : "Abrir menú"}
+          className="w-10 h-10 shrink-0 rounded-xl bg-zinc-900 border border-zinc-700/80 flex flex-col items-center justify-center gap-[5px] focus:outline-none hover:border-[#ff4522]/60 transition-colors shadow-lg active:scale-95"
+        >
+          <span
+            className={`block w-5 h-0.5 rounded-full transition-all duration-300 origin-center ${isOpen ? "rotate-45 translate-y-[7px] bg-[#ff4522]" : "bg-white"
+              }`}
+          />
+          <span
+            className={`block w-5 h-0.5 rounded-full transition-all duration-300 ${isOpen ? "opacity-0 scale-0 bg-[#ff4522]" : "bg-white"
+              }`}
+          />
+          <span
+            className={`block w-5 h-0.5 rounded-full transition-all duration-300 origin-center ${isOpen ? "-rotate-45 -translate-y-[7px] bg-[#ff4522]" : "bg-white"
+              }`}
+          />
+        </button>
+      </div>
+
+      {/* Dropdown Menu Container */}
+      <div
+        className={`w-full bg-[#090a0f]/98 backdrop-blur-2xl border-b border-zinc-800/90 transition-all duration-300 overflow-hidden shadow-[0_20px_50px_rgba(0,0,0,0.9)] ${isOpen ? "max-h-[500px] opacity-100 py-6 px-6" : "max-h-0 opacity-0 py-0 px-6 pointer-events-none"
+          }`}
+      >
+        <div className="flex flex-col gap-3">
+          {/* Tag badge */}
+          <div className="flex items-center gap-2 mb-1">
+            <span className="w-2 h-2 rounded-full bg-[#ff4522] animate-ping" />
+            <span className="text-[11px] font-mono text-[#ff8066] uppercase tracking-wider font-semibold">
+              AGENCIA IA & SOFTWARE FACTORY
+            </span>
+          </div>
+
+          {/* Navigation Links */}
+          <ul className="flex flex-col divide-y divide-zinc-800/60">
+            {navLinks.map((link, idx) => (
+              <li key={idx} className="py-2.5">
+                <a
+                  href={link.href}
+                  onClick={handleLinkClick}
+                  className="text-sm font-semibold text-zinc-200 hover:text-[#ff4522] transition-colors flex items-center justify-between"
+                >
+                  <span>{link.name}</span>
+                  <span className="text-zinc-600 text-xs font-mono">✦</span>
+                </a>
+              </li>
+            ))}
+          </ul>
+
+          {/* Direct CTA */}
+          <div className="pt-3">
+            <a
+              href="https://wa.me/18093962749?text=Hola%20SmartDev!%20Deseo%20cotizar%20un%20proyecto%20de%20software%20o%20inteligencia%20artificial."
+              target="_blank"
+              rel="noreferrer"
+              onClick={handleLinkClick}
+              className="w-full py-3.5 rounded-xl bg-gradient-to-r from-[#ff4522] to-[#ff2a5f] text-white font-bold text-xs uppercase tracking-wider text-center flex items-center justify-center gap-2 shadow-[0_0_20px_rgba(255,69,34,0.4)]"
+            >
+              <span>Hablar con un Ingeniero</span>
+              <span>→</span>
             </a>
           </div>
-          <div className="trigger leading-[0]">
-            <div className="hamburger hamburger--slider">
-              <div className="hamburger-box" onClick={() => setToggle(!toggle)}>
-                <div className="hamburger-inner" />
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div
-        className="dropdown w-full h-auto clear-both float-left bg-white hidden"
-        style={{ display: toggle ? "block" : "none" }}
-      >
-        <div className="dropdown_inner w-full h-auto clear-both float-left py-[25px] px-[40px]">
-          <ul className="anchor_nav">
-            <li className="current float-left w-full">
-              <a
-                className="text-black inline-block p-0 font-poppins font-medium"
-                href="#home"
-                onClick={() => setToggle(false)}
-              >
-                Home
-              </a>
-            </li>
-            <li className="float-left w-full">
-              <a
-                className="text-black inline-block p-0 font-poppins font-medium"
-                href="#portfolio"
-                onClick={() => setToggle(false)}
-              >
-                Portfolio
-              </a>
-            </li>
-            <li className="float-left w-full">
-              <a
-                className="text-black inline-block p-0 font-poppins font-medium"
-                href="#skills"
-                onClick={() => setToggle(false)}
-              >
-                Skills
-              </a>
-            </li>
-            <li className="float-left w-full">
-              <a
-                className="text-black inline-block p-0 font-poppins font-medium"
-                href="#timeline"
-                onClick={() => setToggle(false)}
-              >
-                Timeline
-              </a>
-            </li>
-            <li className="float-left w-full">
-              <a
-                className="text-black inline-block p-0 font-poppins font-medium"
-                href="#price"
-                onClick={() => setToggle(false)}
-              >
-                Price
-              </a>
-            </li>
-            <li className="float-left w-full">
-              <a
-                className="text-black inline-block p-0 font-poppins font-medium"
-                href="#news"
-                onClick={() => setToggle(false)}
-              >
-                News
-              </a>
-            </li>
-            <li className="float-left w-full">
-              <a
-                className="text-black inline-block p-0 font-poppins font-medium"
-                href="#contact"
-                onClick={() => setToggle(false)}
-              >
-                Contact
-              </a>
-            </li>
-          </ul>
         </div>
       </div>
     </div>
   );
 };
+
 export default MobileMenu;
