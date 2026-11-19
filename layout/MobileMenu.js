@@ -3,7 +3,9 @@ import { useState } from "react";
 
 const navLinks = [
   { name: "Inicio", href: "#home" },
+  { name: "NexoSuite ERP (e-CF DGII)", href: "https://nexosuite.lat/landing", external: true, highlight: true },
   { name: "Soluciones por Escala", href: "#soluciones" },
+  { name: "¿Por qué IA? (Video)", href: "#impacto-ia" },
   { name: "Capacidades IA", href: "#capacidades" },
   { name: "Casos de Éxito", href: "#portfolio" },
   { name: "Metodología", href: "#metodologia" },
@@ -79,11 +81,24 @@ const MobileMenu = () => {
               <li key={idx} className="py-2.5">
                 <a
                   href={link.href}
+                  target={link.external ? "_blank" : undefined}
+                  rel={link.external ? "noreferrer" : undefined}
                   onClick={handleLinkClick}
-                  className="text-sm font-semibold text-zinc-200 hover:text-[#ff4522] transition-colors flex items-center justify-between"
+                  className={`text-sm font-semibold transition-colors flex items-center justify-between ${
+                    link.highlight
+                      ? "text-[#ff6a49] hover:text-[#ff8066]"
+                      : "text-zinc-200 hover:text-[#ff4522]"
+                  }`}
                 >
-                  <span>{link.name}</span>
-                  <span className="text-zinc-600 text-xs font-mono">✦</span>
+                  <span className="flex items-center gap-2">
+                    {link.highlight && (
+                      <span className="w-1.5 h-1.5 rounded-full bg-[#ff4522] animate-pulse" />
+                    )}
+                    {link.name}
+                  </span>
+                  <span className="text-zinc-500 text-xs font-mono">
+                    {link.external ? "↗" : "✦"}
+                  </span>
                 </a>
               </li>
             ))}

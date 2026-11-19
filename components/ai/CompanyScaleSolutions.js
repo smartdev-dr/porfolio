@@ -57,7 +57,7 @@ const tiers = [
       {
         icon: "📱",
         title: "Apps Móviles para Operación en Calle",
-        desc: "Desarrollo de apps para choferes, cobros en ruta con Bluetooth, control de acceso y escaneo de inventario (como ENTER e InverAgro).",
+        desc: "Desarrollo de apps para choferes, cobros en ruta con Bluetooth, control de acceso y escaneo de inventario (como NexoSuite, ENTER e InverAgro).",
       },
       {
         icon: "📄",

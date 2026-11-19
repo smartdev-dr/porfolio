@@ -7,6 +7,36 @@ const Portfolio = () => {
   const { setPortfolioModal, modalToggle } = useContext(context);
   const [filter, setFilter] = useState("all");
 
+  const nexoSuitePortfolio = {
+    title: "NexoSuite — ERP Cloud, Facturación Electrónica e-CF (DGII) & POS",
+    shortTitle: "NexoSuite ERP & e-CF",
+    description:
+      "Plataforma integral de gestión empresarial en la nube homologada ante la DGII para la emisión y recepción de comprobantes fiscales electrónicos (e-CF). Equipada con Punto de Venta (POS) táctil para ventas de mostrador y cuadre de cajas, gestión de inventario multi-almacén, contabilidad automatizada y asistentes de WhatsApp con IA para atención y ventas 24/7.",
+    client: "NexoSuite Technologies",
+    category: "ERP Cloud • Facturación e-CF (DGII) • POS",
+    type: "web",
+    date: "2025",
+    page: "https://nexosuite.lat/landing",
+    hero: "/assets/img/portfolio/nexosuite_dashboard.png",
+    cardImg: "/assets/img/portfolio/nexosuite_dashboard.png",
+    featured: true,
+    tags: ["Facturación e-CF", "DGII", "ERP Cloud", "POS", "WhatsApp IA"],
+    images: [
+      { src: "/assets/img/portfolio/nexosuite_dashboard.png", alt: "NexoSuite Dashboard y Facturación e-CF" },
+      { src: "/assets/img/portfolio/nexosuite_pos.png", alt: "Punto de Venta POS Inteligente" },
+      { src: "/assets/img/portfolio/nexosuite_contabilidad.jpeg", alt: "Contabilidad y Finanzas Automatizadas" },
+      { src: "/assets/img/portfolio/nexosuite_whatsapp.jpg", alt: "Atención y Pedidos por WhatsApp con IA" },
+      { src: "/assets/img/portfolio/nexosuite_reportes.png", alt: "Reportes Fiscales y Métricas en Tiempo Real" },
+    ],
+    social: [
+      {
+        name: "Landing Oficial",
+        icon: "/assets/img/svg/social/instagram.svg",
+        link: "https://nexosuite.lat/landing",
+      },
+    ],
+  };
+
   const mkgPortfolio = {
     title: "Software de gestión de proyectos de construcción",
     shortTitle: "MKG Ingeniería",
@@ -92,6 +122,7 @@ const Portfolio = () => {
   };
 
   const projects = [
+    nexoSuitePortfolio,
     mkgPortfolio,
     enterPorfolio,
     inverAgroPortfolio,
@@ -182,6 +213,12 @@ const Portfolio = () => {
                     {project.category}
                   </span>
 
+                  {project.featured && (
+                    <span className="absolute bottom-3 left-3 px-2.5 py-1 rounded-md text-[10px] font-mono font-bold bg-[#ff4522] text-white shadow-[0_0_15px_rgba(255,69,34,0.6)]">
+                      ✦ PLATAFORMA DESTACADA
+                    </span>
+                  )}
+
                   {/* Client name pill */}
                   <span className="absolute top-3 right-3 text-[11px] font-mono text-[#ff8066] bg-[#ff4522]/20 px-2.5 py-1 rounded-md border border-[#ff4522]/40 backdrop-blur-md">
                     {project.date}
@@ -230,7 +267,7 @@ const Portfolio = () => {
                     rel="noreferrer"
                     className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg bg-zinc-800/80 hover:bg-[#ff4522] text-zinc-300 hover:text-white text-xs font-semibold transition-all border border-zinc-700 hover:border-[#ff4522]"
                   >
-                    <span>Ver Demo</span>
+                    <span>{project.page.includes("nexosuite") ? "Visitar Landing" : "Ver Demo"}</span>
                     <span className="text-xs">↗</span>
                   </a>
                 )}

@@ -4,6 +4,7 @@ import KuraLayout from "@/layout/KuraLayout";
 import MobileMenu from "@/layout/MobileMenu";
 import Hero from "@/components/Hero";
 import CompanyScaleSolutions from "@/components/ai/CompanyScaleSolutions";
+import AIImpactVideoSection from "@/components/ai/AIImpactVideoSection";
 import AIBentoGrid from "@/components/ai/AIBentoGrid";
 import AIRoadmap from "@/components/ai/AIRoadmap";
 import AIEvaluatorWidget from "@/components/ai/AIEvaluatorWidget";
@@ -38,6 +39,9 @@ const Index = () => {
 
       {/* 2. REAL SOLUTIONS BY COMPANY SCALE (PyMEs, Medianas, Corporativos) */}
       <CompanyScaleSolutions />
+
+      {/* 2.5 VIDEO 9:16: ¿POR QUÉ INTEGRAR IA EN LOS PROCESOS DE TU EMPRESA? */}
+      <AIImpactVideoSection />
 
       {/* 3. ASYMMETRIC BENTO GRID: AI & SOFTWARE CAPABILITIES */}
       <AIBentoGrid />

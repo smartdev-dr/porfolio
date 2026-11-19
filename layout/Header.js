@@ -59,6 +59,14 @@ const Header = ({ dark = true }) => {
                 <li>
                   <a
                     className="text-xs font-semibold text-zinc-300 hover:text-[#ff4522] transition-colors uppercase tracking-wider"
+                    href="#impacto-ia"
+                  >
+                    Por qué IA
+                  </a>
+                </li>
+                <li>
+                  <a
+                    className="text-xs font-semibold text-zinc-300 hover:text-[#ff4522] transition-colors uppercase tracking-wider"
                     href="#capacidades"
                   >
                     Capacidades IA
@@ -98,6 +106,19 @@ const Header = ({ dark = true }) => {
                 </li>
               </ul>
             </nav>
+
+            {/* NexoSuite Direct Platform Link */}
+            <a
+              href="https://nexosuite.lat/landing"
+              target="_blank"
+              rel="noreferrer"
+              className="hidden lg:inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-zinc-900 hover:bg-zinc-800 border border-zinc-700/80 hover:border-[#ff4522]/80 text-zinc-300 hover:text-white text-xs font-semibold tracking-wide transition-all duration-300 group shadow-md"
+              title="Ir a la landing page de NexoSuite ERP & Facturación e-CF"
+            >
+              <span className="w-1.5 h-1.5 rounded-full bg-[#ff4522] animate-pulse" />
+              <span>NexoSuite ERP</span>
+              <span className="text-[#ff8066] text-xs font-mono">↗</span>
+            </a>
 
             {/* Quick Contact CTA */}
             <a

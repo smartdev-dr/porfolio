@@ -5,7 +5,7 @@ const CopyRight = () => {
         <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
           <div className="text">
             <p className="text-xs text-zinc-400">
-              Copyright © 2025 <span className="text-white font-semibold">SMARTDEV</span>. Todos los derechos reservados.
+              Copyright © 2026 <span className="text-white font-semibold">SMARTDEV</span>. Todos los derechos reservados.
             </p>
           </div>
           <div className="flex items-center gap-6 text-xs text-zinc-400">
